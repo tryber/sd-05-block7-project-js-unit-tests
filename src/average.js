@@ -11,7 +11,9 @@
     - average([1, 2]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
 const average = () => {};
-
+function (valorNumerico) {
+  if (valorNumerico != null && valorNumerico !== undefined) {
+  }
+}
 module.exports = average;
