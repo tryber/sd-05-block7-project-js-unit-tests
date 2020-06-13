@@ -22,8 +22,7 @@ const average = (array) => {
     if (isArray(array) && (array.length !== 0) && (typeof array[cont] === 'number')) {
       media += Math.round(array[cont]);
       contador += 1;
-    }
-    else { return undefined; }
+    } else { return undefined; }
   }
   return (media / contador);
 };
