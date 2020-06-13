@@ -11,7 +11,33 @@
     - average([1, 2]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
-const average = () => {};
-
+let vetor = [''];
+let media = 0;
+let numeroArredondado;
+//=========================================
+const average = (array) => {
+  let contador = 0;
+//testa se a entrada é de fato um array e não um objeto.
+  function isArray(myArray) {
+    return myArray.constructor === Array;
+  }
+//==========================================
+    if (array.length == 0){
+      return undefined;
+    } 
+    else if(isArray(array)){ 
+      for(let cont = 0; cont < array.length; cont++){
+        if (typeof array[cont] === 'number'){
+          media += Math.round(array[cont]);
+          //console.log(media);
+          contador++;
+        } 
+        else return undefined;
+      }
+      return (media/contador);
+    } 
+    else return undefined;
+};
+//console.log(average(vetor));
+average(vetor)
 module.exports = average;
