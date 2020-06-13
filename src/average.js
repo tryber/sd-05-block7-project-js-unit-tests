@@ -11,7 +11,7 @@
     - average([1, 2]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-const vetor = [0, 0, 0, 0, 0, 0, 1];
+// const vetor = [3, 4, 5];
 let media = 0;
 let contador = 0;
 const average = (array) => {
@@ -26,5 +26,5 @@ const average = (array) => {
   }
   return (Math.round(media / contador));
 };
-console.log(average(vetor));
+// console.log(average(vetor));
 module.exports = average;
