@@ -18,7 +18,7 @@ const average = (array) => {
     return undefined;
   }
   for (i = 0; i < array.length; i += 1) {
-    if (typeof array[i] !== "number") {
+    if (typeof array[i] !== 'number') {
       return undefined;
     }
     sum += array[i];
@@ -27,4 +27,4 @@ const average = (array) => {
 };
 
 module.exports = average;
-console.log(average([3, 4, "5"]));
+console.log(average([3, 4, '5']));
