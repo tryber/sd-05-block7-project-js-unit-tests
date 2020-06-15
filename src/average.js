@@ -23,7 +23,7 @@ const average = (arr) => {
     }
     sum += arr[i];
   }
-  return -Math.round(- sum / arr.length);
+  return -Math.round(-sum / arr.length);
 };
 
 console.log(average([2, 2]));
