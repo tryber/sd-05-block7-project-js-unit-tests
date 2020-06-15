@@ -57,11 +57,11 @@ describe('#productDetails', () => {
       [
         productDetails('a', 'b')[0].details.productId.lastIndexOf('123') -
           productDetails('a', 'b')[0].details.productId.length,
-
+        //productDetails('a', 'b')[0].details.productId == /.*123/,
         productDetails('a', 'b')[1].details.productId.lastIndexOf('123') -
           productDetails('a', 'b')[1].details.productId.length,
       ],
-      [-3, -3]
+      [true, -3]
     );
   });
 });
