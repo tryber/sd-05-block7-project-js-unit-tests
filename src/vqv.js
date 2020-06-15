@@ -26,7 +26,7 @@ trabalho na Trybe e mando muito em programação!
 #VQV!`);
 };
 
-console.log(vqv("cuca", 35));
-console.log(vqv("oi"));
+// console.log(vqv("cuca", 35));
+// console.log(vqv("oi"));
 
 module.exports = vqv;
