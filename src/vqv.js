@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-const numbers = require("./numbers");
+const numbers = require('./numbers');
 
 /*
   Use template literals para escrever uma função que,
@@ -22,7 +22,7 @@ const vqv = (nome, idade) => {
   if (nome === undefined || idade === undefined) {
     return undefined;
   }
-  if (typeof nome !== "string" || typeof idade !== "number") {
+  if (typeof nome !== 'string' || typeof idade !== 'number') {
     return undefined;
   }
   return `Oi, meu nome é ${nome}!
