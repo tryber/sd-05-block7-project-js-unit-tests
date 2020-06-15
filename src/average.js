@@ -21,7 +21,7 @@ const average = (array) => {
     }
     soma += array[i];
   }
-  const varRetornar = (soma / array.length).toFixed(0)
+  const varRetornar = (soma / array.length).toFixed(0);
   return varRetornar;
 };
 
