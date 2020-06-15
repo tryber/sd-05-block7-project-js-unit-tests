@@ -16,12 +16,11 @@ let allSum = 0;
 let i = 0;
 const average = (arr) => {
   while (i < arr.length)
-  {
-    (allSum += arr[i]); 
-    i+= 1;
+  {(allSum += arr[i]); 
+    i += 1;
   } 
-    let result = allSum/arr.length; 
-    return(result)
-  };
+  const result = allSum / arr.length; 
+  return (result);
+};
 
 module.exports = average;
