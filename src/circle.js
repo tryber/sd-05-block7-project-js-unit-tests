@@ -24,9 +24,9 @@ const circle = (radius) => {
     return undefined;
   }
   return {
-    radius: radius,
-    area: Math.round(PI * radius * radius * 100) / 100,
-    circumference: 2 * PI * radius,
+    'radius': radius,
+    'area': Math.round(PI * radius * radius * 100) / 100,
+    'circumference': 2 * PI * radius,
   };
 };
 
