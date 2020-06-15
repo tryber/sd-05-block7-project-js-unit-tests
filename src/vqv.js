@@ -17,7 +17,6 @@
 */
 
 const vqv = (nome, idade) => {
-  let paragraph = undefined;
   if (nome && idade) {
     return `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
@@ -27,5 +26,4 @@ trabalho na Trybe e mando muito em programação!
   return undefined;
 };
 
-console.log(typeof vqv('Tunico', 29));
 module.exports = vqv;
