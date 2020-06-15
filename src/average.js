@@ -21,16 +21,14 @@ const average = (arr) => {
   for (i = 0; i < arr.length; i += 1) {
     if (typeof (arr[i]) !== 'number') {
       return (undefined);
-    } else {
+    }
       (allSum += arr[i]);
     }
-  } 
   result = allSum / arr.length;
   if (result === 'NaN') {
     return (undefined);
-  } else {
-    return (Math.round(result));
   }
+    return (Math.round(result));
 };
 
 module.exports = average;
