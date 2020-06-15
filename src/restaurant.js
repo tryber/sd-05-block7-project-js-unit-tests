@@ -82,14 +82,14 @@ const createMenu = (newMenu) => {
 
   const calcTotal = () => {
     let total = 0;
-    consumption.forEach(item => {
+    consumption.forEach((item) => {
       const food = newMenu.food || {};
       const drink = newMenu.dring || {};
       total += food[item] || 0;
       total += drink[item] || 0;
     });
     return total.toFixed(2);
-  }
+  };
 
   return {
     fetchMenu: newMenu,
