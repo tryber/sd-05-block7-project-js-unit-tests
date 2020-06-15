@@ -23,5 +23,5 @@ const average = (funcaoMedia) => {
   }
   return Math.round(sum / funcaoMedia.length);
 };
-//console.log(average([1, 2, 'asdas', 4, 5]))
+// console.log(average([1, 2, 'asdas', 4, 5]))
 module.exports = average;
