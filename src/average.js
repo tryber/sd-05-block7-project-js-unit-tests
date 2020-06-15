@@ -12,17 +12,17 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = (arraia) => {
-  if(arraia.length === 0) {return undefined};
+const average = (arraia) => { 
+  if (arraia.length === 0) { return undefined;}
 
   let soma = 0;
-  for(let i = 0; i < arraia.length; i += 1){
+  for (let i = 0; i < arraia.length; i += 1) {
     if (typeof arraia[i] !== 'number') {
       return undefined;
-    }
-  soma = soma + arraia[i];
-  };
-  return(Math.round(soma/arraia.length));
+    };
+    soma += arraia[i];
+  }
+  return (Math.round( soma / arraia.length ));
 };
 
 // console.log(average([2, 3, 5]));
