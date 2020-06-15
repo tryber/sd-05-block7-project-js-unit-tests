@@ -26,5 +26,5 @@ function createStudent(nome) {
   return estudante;
 }
 
-module.exports = createStudent;
-*/
+module.exports = createStudent;*/
+

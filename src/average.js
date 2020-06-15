@@ -29,3 +29,4 @@ const average = (valor) => {
 };
 
 module.exports = average;
+
