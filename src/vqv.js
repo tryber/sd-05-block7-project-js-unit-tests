@@ -17,7 +17,7 @@
 */
 
 const vqv = (nome, idade) => {
-  if (nome == undefined || idade == undefined) return undefined;
+  if (nome ==+ undefined || idade === undefined) return undefined;
   let phrase = `Oi, meu nome é ${nome}!
 Tenho ${idade} anos,
 trabalho na Trybe e mando muito em programação!
