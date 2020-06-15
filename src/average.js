@@ -13,13 +13,18 @@
 */
 
 const average = (vet) => {
-  const auxVet = vet;
   let media = '';
   let auxSoma = 0;
-  for (let i = 0; i < auxVet.length; i += 1) {
-    auxSoma += auxVet[i];
+  if (vet.length === 0) {
+    return undefined;
   }
-  media = auxSoma / (auxVet.length);
-  return media;
+  for (let i = 0; i < vet.length; i += 1) {
+    if (typeof vet[i] !== 'number') {
+      return undefined;
+    }
+    auxSoma += vet[i];
+    media = auxSoma / (vet.length);
+  }
+  return Math.round(media);
 };
 module.exports = average;
