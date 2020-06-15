@@ -9,10 +9,10 @@
     - average([2, 2]) // Retorno: 2;
     - average([1, 2]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
-*/ 
+*/
 const average = (array) => {
-let media = 0;
-let contador = 0;
+  let media = 0;
+  let contador = 0;
   if (array.length === 0) return undefined;
   function isArray(myArray) {
     return (myArray.constructor === Array);
