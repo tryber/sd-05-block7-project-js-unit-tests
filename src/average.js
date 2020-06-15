@@ -16,13 +16,13 @@ const average = (arr) => {
   let parameterSoma = 0;
   const divisor = arr.length;
   let media = 0;
-  if(typeof(arr) === 'string' || typeof(arr) === 'undefined' || arr.length === 0) {
+  if (typeof (arr) === 'string' || typeof (arr) === 'undefined' || arr.length === 0) {
     media = undefined;
     return media;
   }
-  for (let i = 0; i < arr.length; i += 1) {
+  for (let i = 0; i < arr.length; i += 1){
 
-    if (typeof(arr[i]) === 'number') {
+    if ( typeof (arr[i]) === 'number') {
       parameterSoma += arr[i];
     } else {
       media = undefined;
