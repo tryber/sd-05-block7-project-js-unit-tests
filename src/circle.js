@@ -22,10 +22,11 @@ const circle = (radius) => {
   const PI = 3.14;
   if (!radius) { return undefined; }
   return {
-    radius,
-    area: PI * radius * radius,
+    radius: radius,
+    area: Math.round(PI * radius * radius*100)/100,
     circumference: 2 * PI * radius,
   };
 };
 
 module.exports = circle;
+
