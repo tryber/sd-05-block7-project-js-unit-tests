@@ -12,6 +12,19 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (vet) => {
+  let auxVet= vet;
+  let media='';
+  let auxSoma=0;
+  for (let i=0;i<auxVet.length;i+=1){
+    auxSoma= auxSoma +auxVet[i];
+  }
+  media= auxSoma/(auxVet.length);
+  return media;
+};
+
+let vet1= [1,2,3];
+console.log(average(vet1));
+
 
 module.exports = average;
