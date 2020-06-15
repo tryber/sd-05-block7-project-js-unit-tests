@@ -88,7 +88,7 @@ const createMenu = (objeto) => {
 
 module.exports = createMenu;
 
-const meuRestaurante = createMenu({ food: {}, drink: {} });
+//  const meuRestaurante = createMenu({ food: {}, drink: {} });
 
 //  console.log(meuRestaurante.consumption);
 //  meuRestaurante.order('coxinha');
