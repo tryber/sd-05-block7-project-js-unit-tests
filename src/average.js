@@ -14,13 +14,13 @@
 let sum = 0;
 const average = (array) => {
   for (i = 0; i < array.length; i += 1) {
-    if (typeof array[i] !== "number") {
+    if (typeof array[i] !== 'number') {
       return undefined;
-    } 
+} 
     sum += array[i];
   }
   return Math.round(sum / array.length);
-}
+};
 
 // console.log(average([2,'bla']));
 
