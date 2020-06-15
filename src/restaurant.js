@@ -82,24 +82,24 @@ const createMenu = (newMenu) => {
 
   const calcTotal = () => {
     let total = 0;
-    for (let item of consumption) {
+    consumption.forEach(item => {
       const food = newMenu.food || {};
       const drink = newMenu.dring || {};
       total += food[item] || 0;
       total += drink[item] || 0;
-    }
+    });
     return total.toFixed(2);
   }
 
   return {
     fetchMenu: newMenu,
-    consumption: consumption,
+    consumption,
     order: (item) => {
       consumption.push(item);
       return consumption;
     },
-    pay: () => calcTotal()
-  }
+    pay: () => calcTotal(),
+  };
 };
 
 module.exports = createMenu;
