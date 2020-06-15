@@ -21,7 +21,7 @@ const average = (arr) => {
       break;
     } else {
       sum += arr[i];
-      avg = Math.round (sum/(i+1));
+      avg = Math.round(sum / (i + 1));
     }
   }
   return avg;
