@@ -16,14 +16,18 @@ const average = (number) => {
   let Retorno = 0;
   for (let i = 0; i < number.length; i += 1) {
     if (number[i] === (number[i] + 0)) {
-      Retorno += 1;
+      Retorno += number[i];
     } else {
       console.log('undefined');
       return (undefined);
     }
   }
   console.log(Retorno);
-  return Retorno;
+  return (Retorno / 2);
 };
+/*
+  let arr = [1, 2, 3, 4, 5];
+  average(arr);
+  */
 
 module.exports = average;
