@@ -15,7 +15,7 @@
 const average = (array) => {
   let soma = 0;
   for (let i = 0; i < array.length; i += 1) {
-    if (isNaN(array[i])) {
+    if (typeof array[i] !== 'number') {
       return undefined;
     }
     soma += Math.round(array[i]);
