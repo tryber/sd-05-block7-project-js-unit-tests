@@ -20,7 +20,7 @@ const average = (array) => {
     }
     soma += Math.round(array[i]);
   }
-  let media = soma / array.length;
+  const media = soma / array.length;
   return media;
 };
 
