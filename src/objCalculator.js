@@ -19,6 +19,11 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const calculator = {
+  add: (num, inteiro) => Math.round(num + inteiro),
+  mult: (num, inteiro) => Math.round(num * inteiro),
+  div: (num, inteiro) => Math.floor(num / inteiro),
+  sub: (num, inteiro) => Math.round(num - inteiro),
+};
 
 module.exports = calculator;
