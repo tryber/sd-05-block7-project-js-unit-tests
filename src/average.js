@@ -13,22 +13,20 @@
 */
 
 const average = (arr) => {
-let parameterSoma = 0
-let divisor = arr.length
-let media = 0
-for (let i = 0 ; i < arr.length ; i += 1){
-  if ( typeof(arr[i]) === 'number') {
-    parameterSoma += arr[i]
-  }  else {
-    media = undefined;
-    return media
+  let parameterSoma = 0;
+  let divisor = arr.length;
+  let media = 0;
+  for (let i = 0; i < arr.length; i += 1) {
+    if (typeof arr[i] === "number") {
+      parameterSoma += arr[i];
+    } else {
+      media = undefined;
+      return media;
+    }
   }
-}
-media = Math.round((parameterSoma/divisor)-0.0001);
+  media = Math.round(parameterSoma / divisor - 0.0001);
 
-return media
+  return media;
 };
 
 module.exports = average;
-
-
