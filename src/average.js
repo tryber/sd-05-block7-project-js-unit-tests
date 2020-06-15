@@ -21,7 +21,8 @@ const average = (array) => {
     }
     soma += array[i];
   }
-  return (soma / array.length).toFixed(0);
+  const varRetornar = (soma / array.length).toFixed(0)
+  return varRetornar;
 };
 
 module.exports = average;
