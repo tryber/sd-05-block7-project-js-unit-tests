@@ -17,8 +17,8 @@
 */
 
 const vqv = (nome, idade) => {
-  let saudacao = 'Oi, meu nome é ' + nome + '! tenho ' + idade + ' anos, trabalho na Trybe e mando muito em programação! #VQV!'
-  return saudacao
+  const saudacao = 'Oi, meu nome é ' + nome + '! tenho ' + idade + ' anos, trabalho na Trybe e mando muito em programação! #VQV!';
+  return saudacao;
 };
 // console.log(vqv('roberto', 30))
 module.exports = vqv;
