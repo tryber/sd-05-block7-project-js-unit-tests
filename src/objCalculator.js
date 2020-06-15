@@ -39,5 +39,4 @@ const calculator = {
   },
 };
 
-module.exports = calculator;
-*/
+module.exports = calculator;*/
