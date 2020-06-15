@@ -19,8 +19,9 @@
 const vqv = (nome, idade) => {
   if (nome == null || idade == null) {
     return undefined;
-  } else {
-    return (`Oi, meu nome é ${nome}!
+  }
+  
+  return (`Oi, meu nome é ${nome}!
   tenho ${idade} anos,
   trabalho na Trybe e mando muito em programação!
   #VQV!`);
