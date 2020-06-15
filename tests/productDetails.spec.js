@@ -44,5 +44,6 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.notEqual(productDetails('teste1', 'teste2')[0], productDetails('teste1', 'teste2')[1])
     // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.strictEqual(productDetails('teste1', 'teste2')[0].details.productId.includes('123') && productDetails('teste1', 'teste2')[1].details.productId.includes('123'), true);
   });
 });
