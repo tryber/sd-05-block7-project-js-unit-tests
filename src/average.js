@@ -12,6 +12,22 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (array) => {
+  let sum = 0;
+  const len = array.length;
+
+  if (len === 0) {
+    return undefined;
+  }
+
+  for (let n = 0; n < len; n += 1) {
+    if (typeof array[n] !== 'number') {
+      return undefined;
+    }
+    sum += array[n];
+  }
+
+  return -Math.round(-sum / len);
+};
 
 module.exports = average;
