@@ -14,11 +14,16 @@
 let sum = 0;
 const average = (array) => {
 for (i=0; i<array.length; i+=1){
+  if  (typeof array[i] !== 'number') {
+    return undefined;
+  }
+  else {
   sum += array[i];
 }
-return (sum / array.length);
+}
+return Math.round(sum / array.length);
 };
 
-console.log(average([2,6]));
+// console.log(average([2,'bla']));
 
 module.exports = average;
