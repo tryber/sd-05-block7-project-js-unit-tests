@@ -14,26 +14,21 @@
 
 const average = (arr) => {
   let parameterSoma = 0;
-  let media = 0;
-  
-  const divisor = arr.length;
-  if (divisor === 0) {
-    media = undefined;
-  } else {
-
+  let media = undefined;
   
   for(let i = 0; i < arr.length; i += 1) {
-    parameterSoma += arr[i];
-
-    if (typeof (arr[i]) != 'number') {
-      media = undefined;
-      return media;
+    
+    if (typeof (arr[i]) === 'number') {
+      parameterSoma += arr[i];
+      media = Math.round((parameterSoma / arr.length) - 0.0001);
+    } else {
+      return undefined
     }
   }
-  media = Math.round((parameterSoma / divisor) - 0.0001);
   
-  }
+  
   return media;
 };
 
 module.exports = average;
+
