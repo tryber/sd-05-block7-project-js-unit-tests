@@ -45,9 +45,9 @@ describe('#productDetails', () => {
     // Teste que os dois objetos são diferentes entre si.
     assert.notDeepStrictEqual(productDetails('Alcool gel', 'Máscara')[0], productDetails('Alcool gel', 'Máscara')[1]);
     // (Difícil) Teste que os dois productIds terminam com 123.
-    const toTest = (
+    const toTest = [
       productDetails('Alcool gel', 'Máscara')[0].details.productId,
-      productDetails('Alcool gel', 'Máscara')[1].details.productId);
+      productDetails('Alcool gel', 'Máscara')[1].details.productId];
       console.log(toTest[0].slice(-3), toTest[1].slice(-3));
     assert.strictEqual(toTest[0].slice(-3), toTest[1].slice(-3));
   });
