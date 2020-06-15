@@ -24,24 +24,19 @@
   ]
 */
 
-const productDetails = (firstProduct, secondProduct) => {
-  const output = [];
-  output.push({
+const productDetails = (firstProduct, secondProduct) => [
+  {
     name: firstProduct,
     details: {
       productId: `${firstProduct}123`,
     },
-  });
-  output.push({
+  },
+  {
     name: secondProduct,
     details: {
       productId: `${secondProduct}123`,
     },
-  });
-  return output;
-};
-
-//  console.log(typeof productDetails('Alcool gel', 'Máscara'));
-//  console.log(productDetails('Alcool gel', 'Máscara'));
+  },
+];
 
 module.exports = productDetails;
