@@ -16,12 +16,12 @@ const average = (funcaoMedia) => {
   if (funcaoMedia.length === 0) return undefined;
   let sum = 0;
   for (let i = 0; i < funcaoMedia.length; i += 1) {
-    if (typeof funcaoMedia[Number] !== 'number') {
+    if (typeof funcaoMedia[i] !== 'number') {
       return undefined;
     }
-    sum += funcaoMedia[Number];
+    sum += funcaoMedia[i];
   }
-  return -Math.round(-sum / funcaoMedia.length);
+  return Math.round(sum / funcaoMedia.length);
 };
-
+//console.log(average([1, 2, 'asdas', 4, 5]))
 module.exports = average;
