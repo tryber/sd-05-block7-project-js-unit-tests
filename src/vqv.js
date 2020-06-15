@@ -15,7 +15,7 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
-/* const vqv=(nome,idade)=>{            
+/* const vqv=(nome,idade)=>{
   if(nome === '' && idade === ''){
   const frase1 = undefined;
   return frase1;
