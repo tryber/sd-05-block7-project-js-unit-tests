@@ -23,7 +23,7 @@ const average = (array) => {
     }
     arrayAverage += array[i] / array.length;
   }
-  return -Math.round(arrayAverage);
+  return Math.round(arrayAverage);
 };
 
 module.exports = average;
