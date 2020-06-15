@@ -14,8 +14,9 @@
 
 const average = (number) => {
   let Retorno = 0;
+  console.log(number.length)
   for (let i = 0; i < number.length; i += 1) {
-    if (number[i] === (number[i] + 0)) {
+    if (number[i] === (number[i] + 0) || number.length === 0) {
       Retorno += number[i];
     } else {
       console.log('undefined');
@@ -26,7 +27,7 @@ const average = (number) => {
   return (Math.round(Retorno / number.length));
 };
 /*
-  let arr = [1, 2, 3, 4, 5, 6];
+  let arr = [];
   average(arr);
 */
 
