@@ -12,8 +12,16 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {
-  // add your implementation here
+const average = (funcaoMedia) => {
+  if (funcaoMedia.length === 0) return undefined;
+  let sum = 0;
+  for (let i = 0; i < funcaoMedia.length; i++) {
+    if (typeof funcaoMedia[Number] !== 'number') {
+      return undefined;
+    }
+    sum = sum + funcaoMedia[Number];
+  }
+  return Math.round (sum / funcaoMedia.length);
 };
 
 module.exports = average;
