@@ -23,6 +23,7 @@ const average = (arr) => {
       return undefined;
     }
   }
+  if (media === -0) media = 0;
   return media;
 };
 module.exports = average;
