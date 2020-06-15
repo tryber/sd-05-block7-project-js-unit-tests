@@ -22,7 +22,7 @@
 const calculator = {
   add: (num, inteiro) => Math.round(num + inteiro),
   mult: (num, inteiro) => Math.round(num * inteiro),
-  div: (num, inteiro) => Math.floor(num / inteiro), //inicialmente resolvido com Math.round(num / inteiro) - 1,
+  div: (num, inteiro) => Math.floor(num / inteiro),
   sub: (num, inteiro) => Math.round(num - inteiro),
 };
 
