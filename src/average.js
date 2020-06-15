@@ -21,7 +21,7 @@ const average = (array) => {
     }
     soma += array[i];
   }
-  const varRetornar = parseInt((soma / array.length).toFixed(0));
+  const varRetornar = parseInt((soma / array.length).toFixed(0), 10);
   return varRetornar;
 };
 
