@@ -9,21 +9,22 @@
     - average([2, 2]) // Retorno: 2;
     - average([1, 2]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
-*/
-// const vetor = [0, 0, 0, 0, 0, 0, 0];
+*/ 
+const average = (array) => {
 let media = 0;
 let contador = 0;
-const average = (array) => {
+  if (array.length === 0) return undefined;
   function isArray(myArray) {
     return (myArray.constructor === Array);
   }
   for (cont = 0; cont < array.length; cont += 1) {
-    if (isArray(array) && (array.length !== 0) && (typeof array[cont] === 'number')) {
-      media += array[cont];
-      contador += 1;
-    } else { return undefined; }
+    if (!isArray(array) || typeof array[cont] !== 'number') {
+      return undefined;
+    }
+    media += array[cont];
+    contador += 1;
   }
-  return (Math.round(media / contador));
+  return Math.round(media / contador);
 };
 
 module.exports = average;

@@ -30,10 +30,10 @@ const { isNumber } = require('util');
     let circumference = { circumference: 0 };
     // ========================================================
     // Teste se circle retorna um objeto. ====>checked.
-    assert.strictEqual(typeof (circle(radius)), 'object');
+    assert.strictEqual(typeof (circle(1)), 'object');
     // ========================================================
     // Teste se o objeto retornado tem 3 entradas. ====>checked.
-    assert.deepStrictEqual((Object.entries(circle(radius))).length, 3);
+    assert.deepStrictEqual((Object.entries(circle(1))).length, 3);
     // ========================================================
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.====>checked.
     assert.strictEqual(circle(), undefined);
@@ -52,17 +52,17 @@ const { isNumber } = require('util');
 */
 describe('#circle', () => {
   it('given a radius, should return an object with circles info', () => {
-    assert.fail();
+    //assert.fail(rece);
     // ESCREVA SEUS TESTES ABAIXO:
     let circle_3 = circle(3);
     let area = { area: 0 };
     let circumference = { circumference: 0 };
     // ========================================================
     // Teste se circle retorna um objeto. ====>checked.
-    assert.strictEqual(typeof (circle(radius)), 'object');
+    assert.strictEqual(typeof (circle(1)), 'object');
     // ========================================================
     // Teste se o objeto retornado tem 3 entradas. ====>checked.
-    assert.deepStrictEqual((Object.entries(circle(radius))).length, 3);
+    assert.deepStrictEqual((Object.entries(circle(1))).length, 3);
     // ========================================================
     // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.====>checked.
     assert.strictEqual(circle(), undefined);
