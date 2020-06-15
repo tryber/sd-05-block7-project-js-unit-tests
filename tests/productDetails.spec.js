@@ -61,7 +61,7 @@ describe('#productDetails', () => {
         productDetails('a', 'b')[1].details.productId.lastIndexOf('123') -
           productDetails('a', 'b')[1].details.productId.length,
       ],
-      [true, -3]
+      [-3, -3]
     );
   });
 });
