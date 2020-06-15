@@ -14,16 +14,11 @@ const assert = require('assert');
 */
 
 const average = (array) => {
+  array = array || [];
   const length = array.length;
-  if(!array.every((n) => Number.isInteger(n))) return undefined;
+  if(length === 0 || !array.every((n) => Number.isInteger(n))) return undefined;
   const sum = array.reduce((total, n) => total + n);
-  return Math.floor(sum/length);
+  return Math.round(sum/length);
 };
-
-
-assert.strictEqual(typeof(average), 'function');
-assert.strictEqual(average([2, 2]), 2);
-assert.strictEqual(average([1, 2]), 1);
-assert.strictEqual(average([2, '2']), undefined);
 
 module.exports = average;
