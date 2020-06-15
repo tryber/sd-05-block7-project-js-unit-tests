@@ -14,26 +14,25 @@
 
 const average = (arr) => {
   let parameterSoma = 0;
-  const divisor = arr.length;
   let media = 0;
-  if (typeof (arr) === 'string' || typeof (arr) === 'undefined' || arr.length === 0) {
+  
+  const divisor = arr.length;
+  if (divisor === 0) {
     media = undefined;
-    return media;
-  }
-  for (let i = 0; i < arr.length; i += 1){
+  } else {
 
-    if ( typeof (arr[i]) === 'number') {
-      parameterSoma += arr[i];
-    } else {
+  
+  for(let i = 0; i < arr.length; i += 1) {
+    parameterSoma += arr[i];
+
+    if (typeof (arr[i]) != 'number') {
       media = undefined;
       return media;
     }
   }
   media = Math.round((parameterSoma / divisor) - 0.0001);
-  if (parameterSoma === 0) {
-    media = 0;
+  
   }
-
   return media;
 };
 
