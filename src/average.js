@@ -15,7 +15,7 @@
 const average = (arr) => {
   let parameterSoma = 0;
   let media;
-  for (let i = 0;i < arr.length;i += 1) {
+  for (let i = 0; i < arr.length; i += 1) {
     if (typeof (arr[i]) === 'number') {
       parameterSoma += arr[i];
       media = Math.round((parameterSoma / arr.length) - 0.0001);
