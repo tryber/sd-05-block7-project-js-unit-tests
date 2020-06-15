@@ -22,12 +22,12 @@ const average = (number) => {
       return (undefined);
     }
   }
-  console.log(Retorno / number.length);
-  return (Retorno / number.length);
+  console.log(Math.round(Retorno / number.length));
+  return (Math.round(Retorno / number.length));
 };
 /*
-  let arr = [1, 2, 3, 4, 5];
+  let arr = [1, 2, 3, 4, 5, 6];
   average(arr);
- */
+*/
 
 module.exports = average;
