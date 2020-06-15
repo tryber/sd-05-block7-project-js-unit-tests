@@ -15,11 +15,10 @@
 const average = (number) => {
   let Retorno = 0;
   for (let i = 0; i < number.length; i += 1) {
-    if (number[i] === (number[i] + 0) || number.length === 0) {
-      Retorno += number[i];
-    } else {
-      console.log('undefined');
+    if (number.length === 0 || number[i] !== (number[i] + 0)) {
       return (undefined);
+    } else if (number[i] === (number[i] + 0)) {
+      Retorno += number[i];
     }
   }
   console.log(Math.round(Retorno / number.length));
