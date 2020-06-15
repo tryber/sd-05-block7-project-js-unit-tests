@@ -20,10 +20,10 @@
 */
 
 const calculator = {
-  add: (num1, num2) => (Number.isInteger(num1) && Number.isInteger(num2)) ? num1 + num2 : 'Número informado não é inteiro',
-  mult: (num1, num2) => (Number.isInteger(num1) && Number.isInteger(num2)) ? num1 * num2 : 'Número informado não é inteiro',
-  div: (num1, num2) => (Number.isInteger(num1) && Number.isInteger(num2)) ? Math.floor(num1 / num2) : 'Número informado não é inteiro',
-  sub: (num1, num2) => (Number.isInteger(num1) && Number.isInteger(num2)) ? num1 - num2 : 'Número informado não é inteiro',
+  add: (num1, num2) => num1 + num2,
+  mult: (num1, num2) => num1 * num2,
+  div: (num1, num2) => Math.floor(num1 / num2),
+  sub: (num1, num2) => num1 - num2,
 };
 
 module.exports = calculator;
