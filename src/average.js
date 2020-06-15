@@ -14,7 +14,6 @@
 
 const average = (number) => {
   let Retorno = 0;
-  console.log(number.length)
   for (let i = 0; i < number.length; i += 1) {
     if (number[i] === (number[i] + 0) || number.length === 0) {
       Retorno += number[i];
