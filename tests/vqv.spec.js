@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
-
+/*
 const assert = require('assert');
 const vqv = require('../src/vqv.js');
-
+*/
 /*
   Use template literals para escrever uma função que recebe seu nome e sua idade e retorna o parágrafo descrito abaixo.
   Caso a função seja chamada sem nenhum parâmetro, o valor undefined deve ser retornado.
@@ -46,6 +46,6 @@ const vqv = require('../src/vqv.js');
         'trabalho na Trybe e mando muito em programação!\n' +
         '#VQV!',
     );*/
-    assert.strictEqual(vqv(), undefined);
+   // assert.strictEqual(vqv(), undefined);
 //  });*/
 //});

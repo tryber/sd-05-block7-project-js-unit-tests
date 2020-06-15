@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
-const assert = require('assert');
-const createStudent = require('../src/createStudent');
+//const assert = require('assert');
+//const createStudent = require('../src/createStudent');
 
 /*
   Dada uma função chamada createStudent que recebe como parâmetro um nome, retorne um objeto que contenha duas chaves:
@@ -23,7 +23,7 @@ const createStudent = require('../src/createStudent');
 
 //describe('#createStudent', () => {
 //it('returns the object as specified', () => {
-
+/*
 const estudante = createStudent('Leandrão, o Lobo Solitário');
 assert.strictEqual(typeof estudante, 'object');
 assert.strictEqual(typeof estudante.feedback, 'function');
@@ -43,3 +43,4 @@ assert.strictEqual(estudante3.name, 'Inácio');
 assert.strictEqual(estudante3.feedback(), 'Eita pessoa boa!');
 //});
 //});
+*/

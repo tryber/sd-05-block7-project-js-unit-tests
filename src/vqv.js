@@ -15,7 +15,7 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
-
+/*
 const vqv = (nome, idade) => {            
   
   
@@ -49,4 +49,4 @@ const vqv = (nome, idade) => {
 
 module.exports = vqv;
 
-console.log(vqv());
+console.log(vqv());*/
