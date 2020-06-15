@@ -14,14 +14,18 @@
 
 // const average = () => {};
 const average = (array) => {
+// Verifica se o array ta vazio
   if (array.length === 0) return undefined;
   let auxSoma = 0;
+// Laço for para somar os valores do array
   for (let i = 0; i < array.length; i += 1) {
+// Se o valor da lista não for um número retorna indefinido
     if (typeof array[i] !== 'number') {
       return undefined;
     }
-    auxSoma += array[i];
+    auxSoma += array[i]; // Faz a soma de todos os itens do array
   }
+// Função math.round arredonda o valor da divisão da média para valor inteiro
   return Math.round(auxSoma / array.length);
 };
 module.exports = average;
