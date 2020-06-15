@@ -15,11 +15,10 @@
 let allSum = 0;
 let i = 0;
 const average = (arr) => {
-  while (i < arr.length)
-  {
+  while (i < arr.length) {
     (allSum += arr[i]); 
     i += 1;
-  }; 
+  } 
   const result = allSum / arr.length; 
   return (result);
 };
