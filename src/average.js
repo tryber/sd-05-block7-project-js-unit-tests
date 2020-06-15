@@ -25,6 +25,9 @@ const average = (arr) => {
     }
   }
   media = Math.round((parameterSoma / divisor) - 0.0001);
+  if ( parameterSoma === 0) {
+    media = 0;
+  }
 
   return media;
 };
