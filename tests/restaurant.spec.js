@@ -123,7 +123,7 @@ describe('#createMenu', () => {
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     const meuRestaurante = createMenu({food: {coxinha: 3.90, sanduiche: 9.90}, drinks: {agua: 3.90, cerveja: 6.90}});
-    assert.deepStrictEqual(meuRestaurante.order('coxinha') && meuRestaurante.order('agua') && meuRestaurante.order('coxinha') && meuRestaurante.pay(), 11.7);
+    assert.deepStrictEqual(meuRestaurante.order('coxinha') && meuRestaurante.order('agua') && meuRestaurante.order('coxinha') && meuRestaurante.pay(), 12.87);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });

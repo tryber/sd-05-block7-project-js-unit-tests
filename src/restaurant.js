@@ -84,7 +84,7 @@ function functionPay(restaurant) {
       somaTotal += restaurant.fetchMenu.drinks[itens[i]];
     }
   }
-  return somaTotal;
+  return parseFloat((somaTotal*1.1).toFixed(2));
 }
 
 const createMenu = (myMenu) => {
