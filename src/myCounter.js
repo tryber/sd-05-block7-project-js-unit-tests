@@ -22,7 +22,6 @@ const myCounter = () => {
     for (let n = 2; n <= 3; n += 1) {
       myArray.push(n);
     }
-
   }
   return myArray;
 };
