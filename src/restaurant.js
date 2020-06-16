@@ -136,18 +136,22 @@ const bebidas = Object.entries(meuRestaurante.fetchMenu.drinks);
 meuRestaurante.pay = () => {
   let consumo = meuRestaurante.consumption;
   let contaAPagar = 0;
-  for (index in consumo) {
+  for (let j = 0 ; j < consumo.length ; j += 1) {
     for (let i = 0; i < comidas.length; i += 1) {
-      if (consumo[index] === comidas[i][0]) {
+      if (consumo[j] === comidas[i][0]) {
         contaAPagar += comidas[i][1];
       }
     }
     for (let i = 0; i < bebidas.length; i += 1) {
-      if (consumo[index] === bebidas[i][0]) {
+      if (consumo[j] === bebidas[i][0]) {
         contaAPagar += bebidas[i][1];
       }
     }
   }
   return contaAPagar + contaAPagar * 0.1;
 };
+
+meuRestaurante.order('coxinha')
+console.log(meuRestaurante.pay())
 module.exports = createMenu;
+
