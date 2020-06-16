@@ -13,19 +13,18 @@
 */
 
 const average = (media) => {
-  let numeros = 0;
   let n = 0;
-  let resultado = 0;
-  if (typeof media[n] !== 'number') {
-    return undefined;
+  let soma = 0;
+  for (n = 0; n < media.length; n += 1) {
+    if (typeof media[n] !== 'number') {
+      return undefined;
+    }
+    if (media.length === 0) {
+      return undefined;
+    }
+    soma += media[n];
+    a = soma / media.length;
   }
-  if (media.length === 0) {
-    return undefined;
-  }
-  numeros += average[n];
-  n += 1;
-  resultado = numeros/n;
+  return (average);
 };
-numeros.forEach(media);
-  
 module.exports = average;
