@@ -15,10 +15,10 @@
 const average = (array) => {
   let res = 0;
   let total = 0;
-  function type (e) {
+  function type(e) {
     return typeof (e) === 'number';
   }
-  if (Array.isArray(array) && array.length >=1 && array.every(type)) {
+  if (Array.isArray(array) && array.length >= 1 && array.every(type)) {
     for (let i = 0; i < array.length; i += 1) {
       total += array[i];
     }
@@ -26,6 +26,6 @@ const average = (array) => {
     return res;
   }
   return undefined;
-}
+};
 
 module.exports = average;
