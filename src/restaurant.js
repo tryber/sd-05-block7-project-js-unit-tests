@@ -76,29 +76,24 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = (objeto) => ({
+const createMenu = objeto => ({
   fetchMenu: objeto,
   consumption: [],
-  order: function (item) {
+  order(item) {
     this.consumption.push(item);
   },
-  pay: function () {
+  pay() {
     let somaDasOrders = 0;
-    for (let i = 0; i < this.consumption.length; i += 1) {
-      if (this.fetchMenu.food[this.consumption[i]]) {
-        somaDasOrders += this.fetchMenu.food[this.consumption[i]];
+    for (item in this.consumption) {
+      if (objeto.food[this.consumption[item]]) {
+        somaDasOrders += objeto.food[this.consumption[item]];
       } else {
-        somaDasOrders += this.fetchMenu.drink[this.consumption[i]];
+        somaDasOrders += objeto.drink[this.consumption[item]];
       }
     }
+    // const somaDasOrdersMais10porcent = (somaDasOrders * 1.1);
 
-    // let foodsPrice = this.fetchMenu.food[this.consumption[0]]
-    // let drinksPrice = this.fetchMenu.drink[this.consumption[1]]
-    let somaDasOrdersMais10porcent = somaDasOrders * 1.1;
-
-    return parseFloat(
-      Number.parseFloat(somaDasOrdersMais10porcent).toPrecision(4)
-    );
+    return parseFloat((somaDasOrders * 1.1).toPrecision(4));
   },
 });
 
