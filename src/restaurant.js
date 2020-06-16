@@ -15,50 +15,8 @@
   meuRestaurante.order('coxinha') // Retorno: undefined
   meuRestaurante.consumption // Retorno: ['coxinha']
   meuRestaurante.pay() // Retorno: 3.9
-  */
-/*  const createMenu = obj => ({
-    fetchMenu: () => obj
-  })
-  const meuRestaurante = createMenu({
-    food: {'coxinha': 3.90, 'sanduiche': 9.90},
-    drinks: {'agua': 3.90, 'cerveja': 6.90}
-  });
-  meuRestaurante.fetchMenu();
-  meuRestaurante.order = (string) => string
-  meuRestaurante.consumption = []
-  meuRestaurante.consumption.push(meuRestaurante.order('coxinha'))
-  meuRestaurante.pay = (consumption) => {
-    consumption = meuRestaurante.consumption
-    let soma = 0;
-      for( i = 0; i < consumption.length ; i += 1) {
-        if(meuRestaurante.fetchMenu().food[consumption[i]] !== undefined)
-       soma += meuRestaurante.fetchMenu().food[consumption[i]];
-      };
-  }
-  meuRestaurante.order('coxinha')
-  console.log(meuRestaurante.order('coxinha'))
-  console.log(meuRestaurante.consumption)
-  console.log(meuRestaurante.pay()) */
-/* 
-    'consumption' : [],
-    order: (string) => {
-      createMenu[consumption].push(string)
-    },
-    pay: () => { 
-      let soma = 0;
-      for( i = 0; i < consumption.length ; i += 1) {
-        if(fetchMenu.food[consumption[i]] !== undefined)
-       soma += fetchMenu.food[consumption[i]];
-        if(fetchMenu.drink[consumption[i]] !== undefined) 
-       soma += fetchMenu.drink[consumption[i]];
-      };
-    } 
-  });
- */
-/*
   Uma função createMenu retorna um objeto com as seguintes características:
   - Uma chave `fetchMenu` retorna o objeto que a função `createMenu` recebe por parâmetro. O menu tem sempre duas chaves, `food` e `drink`, no seguinte formato:
-
   const meuRestaurante = createMenu({
     food: {'coxinha': 3.90, 'sanduiche', 9.90},
     drinks: {'agua': 3.90, 'cerveja': 6.90}
@@ -79,7 +37,7 @@
 //------------------------------------------------------------------------------------------
 // PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
 // DICA: para criar isso, você vai precisar definir a função `createMenu()`, definir o objeto que a `createMenu()` define separadamente dela e, depois, a função que será definida em `order`.
-// ```
+//
 // const restaurant = {}
 //
 // const createMenu = (myMenu) => // Lógica que edita o objeto `restaurant`
@@ -97,14 +55,14 @@ const meuRestaurante = createMenu({
   food: { coxinha: 3.9, sanduiche: 9.9 },
   drinks: { agua: 3.9, cerveja: 6.9 },
 });
-meuRestaurante.order = string => consumed(string);
 function consumed(string) {
   meuRestaurante.consumption.push(string);
 }
+meuRestaurante.order = string => consumed(string);
 const comidas = Object.entries(meuRestaurante.fetchMenu().food);
 const bebidas = Object.entries(meuRestaurante.fetchMenu().drinks);
 meuRestaurante.pay = () => {
-  let consumo = meuRestaurante.consumption;
+  const consumo = meuRestaurante.consumption;
   let contaAPagar = 0;
   for (let j = 0; j < consumo.length; j += 1) {
     for (let i = 0; i < comidas.length; i += 1) {
@@ -118,6 +76,6 @@ meuRestaurante.pay = () => {
       }
     }
   }
-  return contaAPagar + contaAPagar * 0.1;
+  return contaAPagar + (contaAPagar * 0.1);
 };
 module.exports = createMenu;
