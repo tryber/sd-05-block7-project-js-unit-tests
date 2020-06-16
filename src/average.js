@@ -12,12 +12,20 @@
     - average([1, '2']) // Retorno: undefined;
 */
 const average = (arr) => {
-  //arrayDaNaty =  (1 + 2 + 3)  / 3
+  if(arr.length === 0){
+    return undefined
+  }
   let soma = 0;
   for(let i  = 0;  i < arr.length; i ++  ){
+    if (typeof arr[i] != 'number'){
+      return undefined;
+
+
+    }
+    //isNaN(arr[i])
       soma = soma + arr[i]
   }  
-  return  soma / arr.length
+  return Math.round(soma / arr.length) 
 };
 
 module.exports = average;
