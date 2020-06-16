@@ -112,7 +112,7 @@ describe('#createMenu', () => {
     // objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
     // ```
     objRestaurant = createMenu({objetoQualquer: 'valor qualquer'});
-    assert.deepStrictEqual(objRestaurant.order('coxinha') && objRestaurant.order('agua') &&objRestaurant.order('coxinha') && objRestaurant.consumption, ['coxinha', 'agua', 'coxinha']);
+    assert.deepStrictEqual(objRestaurant.order('coxinha') && objRestaurant.order('agua') && objRestaurant.order('coxinha') && objRestaurant.consumption, ['coxinha', 'agua', 'coxinha']);
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
@@ -122,6 +122,8 @@ describe('#createMenu', () => {
     // objetoRetornado.order('coxinha');
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
+    const meuRestaurante = createMenu({food: {coxinha: 3.90, sanduiche: 9.90}, drinks: {agua: 3.90, cerveja: 6.90}});
+    assert.deepStrictEqual(meuRestaurante.order('coxinha') && meuRestaurante.order('agua') && meuRestaurante.order('coxinha') && meuRestaurante.pay(), 11.7);
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
   });
 });

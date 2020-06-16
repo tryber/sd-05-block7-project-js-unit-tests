@@ -80,6 +80,21 @@ const createMenu = (myMenu) => {
       restaurant.consumption.push(request);
       return restaurant;
     },
+    pay: () => {
+      const itens = restaurant.consumption;
+      let somaTotal = 0;
+      const food = Object.keys(restaurant.fetchMenu.food);
+      const drinks = Object.keys(restaurant.fetchMenu.drinks);
+      for (let i = 0; i < itens.length; i += 1) {
+        if (food.includes(itens[i])) {
+          somaTotal += restaurant.fetchMenu.food[itens[i]];
+        }
+        if (drinks.includes(itens[i])) {
+          somaTotal += restaurant.fetchMenu.drinks[itens[i]];
+        }
+      }
+      return somaTotal;
+    }
   };
   return restaurant;
 };
