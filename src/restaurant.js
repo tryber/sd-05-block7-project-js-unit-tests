@@ -59,17 +59,17 @@ function consumed(string) {
   meuRestaurante.consumption.push(string);
 }
 meuRestaurante.order = string => consumed(string);
-const comidas = Object.keys(meuRestaurante.fetchMenu().food);
-const bebidas = Object.keys(meuRestaurante.fetchMenu().drinks);
+const comidas = Object.keys(meuRestaurante.fetchMenu.food);
+const bebidas = Object.keys(meuRestaurante.fetchMenu.drinks);
 meuRestaurante.pay = () => {
   const consumo = meuRestaurante.consumption;
   let contaAPagar = 0;
   for (let j = 0; j < consumo.length; j += 1) {
     if (comidas.includes(consumo[j])) {
-      contaAPagar += meuRestaurante.fetchMenu().food[consumo[j]];
+      contaAPagar += meuRestaurante.fetchMenu.food[consumo[j]];
     }
     if (bebidas.includes(consumo[j])) {
-      contaAPagar += meuRestaurante.fetchMenu().drinks[consumo[j]];
+      contaAPagar += meuRestaurante.fetchMenu.drinks[consumo[j]];
     }
   }
   return contaAPagar + (contaAPagar * 0.1);
