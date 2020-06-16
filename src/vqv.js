@@ -15,8 +15,6 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
-let nome = '';
-let idade = 0;
 
 const vqv = (nome, idade) => {
   if (!nome || !idade) {
