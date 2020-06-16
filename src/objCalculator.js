@@ -24,29 +24,25 @@ const calculator = {
     if (Number.isInteger(int1) && Number.isInteger(int2)) {
       const add = int1 + int2;
       return add;
-    }  
-    alert('Precisa ser número inteiro');
+    }
   },
-  mult:(int1, int2) => {
+  mult: (int1, int2) => {
     if (Number.isInteger(int1) && Number.isInteger(int2)) {
       const mult = int1 * int2;
       return mult;
-    } 
-    alert('Precisa ser número inteiro');
+    }
   },
-  div:(int1, int2) => {
+  div: (int1, int2) => {
     if (Number.isInteger(int1) && Number.isInteger(int2)) {
       const div = Math.floor(int1 / int2);
       return div;
-    } 
-    alert('Precisa ser número inteiro');
+    }
   },
-  sub:(int1, int2) => {
+  sub: (int1, int2) => {
     if (Number.isInteger(int1) && Number.isInteger(int2)) {
       const sub = int1 - int2;
       return sub;
     }
-  alert('Precisa ser número inteiro');
   },
 };
 
