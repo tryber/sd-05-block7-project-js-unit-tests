@@ -80,7 +80,7 @@ const createMenu = (myMenu) => {
       restaurant.consumption.push(request);
       return restaurant;
     },
-  }; 
+  };
   return restaurant;
 };
 
