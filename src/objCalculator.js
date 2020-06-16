@@ -25,7 +25,7 @@ const calculator = {
   div: (num1, num2) => {
     division = num1 / num2;
     result3 = Math.floor(division);
-    return result3
+    return result3;
   },
   sub: (num1, num2) => (num1 - num2),
 };
