@@ -14,7 +14,7 @@
 
 const average = (media) => {
   let numeros = 0;
-  if (typeof media[] !== "number" || media.length === 0) {
+  if (typeof media[n] !== "number") {
     return undefined;
   }
 };
