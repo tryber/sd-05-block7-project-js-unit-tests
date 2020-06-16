@@ -25,7 +25,7 @@ const circle = (radius) => {
   }
   return {
     radius,
-    area: Math.round(PI * radius * radius * 100) / 100,
+    area: PI * radius * radius,
     circumference: 2 * PI * radius,
   };
 };
