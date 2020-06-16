@@ -19,40 +19,34 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const numbers = require("./numbers");
-
 const calculator = {
   add: (int1, int2) => {
     if (Number.isInteger(int1) && Number.isInteger(int2)) {
-    const add = int1 + int2;
-    return add;
-    } else {
-    alert('Precisa ser número inteiro')
-    }
+      const add = int1 + int2;
+      return add;
+    }  
+    alert('Precisa ser número inteiro');
   },
   mult:(int1, int2) => {
     if (Number.isInteger(int1) && Number.isInteger(int2)) {
-    const mult = int1 * int2;
-    return mult;
-    } else {
-    alert('Precisa ser número inteiro')
-    }
+      const mult = int1 * int2;
+      return mult;
+    } 
+    alert('Precisa ser número inteiro');
   },
   div:(int1, int2) => {
     if (Number.isInteger(int1) && Number.isInteger(int2)) {
-    const div = Math.floor(int1 / int2);
-    return div;
-    } else {
-    alert('Precisa ser número inteiro')
-    }
+      const div = Math.floor(int1 / int2);
+      return div;
+    } 
+    alert('Precisa ser número inteiro');
   },
   sub:(int1, int2) => {
     if (Number.isInteger(int1) && Number.isInteger(int2)) {
-    const sub = int1 - int2;
-    return sub;
-    } else {
-    alert('Precisa ser número inteiro')
+      const sub = int1 - int2;
+      return sub;
     }
+  alert('Precisa ser número inteiro');
   },
 };
 
