@@ -14,9 +14,18 @@
 
 const average = (media) => {
   let numeros = 0;
-  if (typeof media[n] !== "number") {
+  let n = 0;
+  let resultado = 0;
+  if (typeof media[n] !== 'number') {
     return undefined;
   }
+  if (media.length === 0) {
+    return undefined;
+  }
+  numeros += average[n];
+  n += 1;
+  resultado = numeros/n;
 };
-
+numeros.forEach(media);
+  
 module.exports = average;
