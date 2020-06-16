@@ -79,13 +79,8 @@
 
 const createMenu = (objeto) => {
   const consumption = [];
-
-  return {
-    fetchMenu: objeto,
-    consumption,
-    order: request => consumption.push(request),
-    pay: () => {
-      let soma = 0;
+  const somaTudo = () => {
+    let soma = 0;
       for (item of consumption) {
         if (objeto.food[item] !== undefined) {
           soma += objeto.food[item];
@@ -94,8 +89,15 @@ const createMenu = (objeto) => {
         }
       }
       return Number(soma.toFixed(2));
-    },
   };
+
+  return {
+    fetchMenu: objeto,
+    consumption,
+    order: request => consumption.push(request),
+    pay: () => somaTudo(),
+  };
+
 };
 
 module.exports = createMenu;
