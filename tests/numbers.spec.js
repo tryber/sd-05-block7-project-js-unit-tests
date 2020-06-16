@@ -32,5 +32,5 @@ const numbers = require('../src/numbers');
     arrayNovo = [' '];
     assert.strictEqual(numbers(arrayNovo),false);
 //  });
-//});
-*/
+//});*/
+
