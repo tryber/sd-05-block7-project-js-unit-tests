@@ -15,18 +15,17 @@
 const average = (array) => {
   let res = 0;
   let total = 0;
-  if (Array.isArray(array) && array.length >=1 && array.every(function (e) {
-    return typeof(e) == 'number';
-  })){
-    for (let i = 0; i < array.length; i++) {
-      total = total + array[i];
+  function type (e) {
+    return typeof (e) === 'number';
+  }
+  if (Array.isArray(array) && array.length >=1 && array.every(type)) {
+    for (let i = 0; i < array.length; i += 1) {
+      total += array[i];
     }
     res = -Math.round(-total / array.length);
     return res;
-  } else {
-    return undefined;
   }
+  return undefined;
 }
 
-console.log(average([]))
 module.exports = average;
