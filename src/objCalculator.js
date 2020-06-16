@@ -21,28 +21,32 @@
 
 const calculator = {
   add: (int1, int2) => {
-    if (Number.isInteger(int1) && Number.isInteger(int2)) {
-      const add = int1 + int2;
-      return add;
+    if (Number.isInteger(int1) === false || Number.isInteger(int2) === false) {
+      return undefined;
     }
+    const add = int1 + int2;
+    return add;
   },
   mult: (int1, int2) => {
-    if (Number.isInteger(int1) && Number.isInteger(int2)) {
-      const mult = int1 * int2;
-      return mult;
+    if (Number.isInteger(int1) === false || Number.isInteger(int2) === false) {
+      return undefined;
     }
+    const mult = int1 * int2;
+    return mult;
   },
   div: (int1, int2) => {
-    if (Number.isInteger(int1) && Number.isInteger(int2)) {
-      const div = Math.floor(int1 / int2);
-      return div;
+    if (Number.isInteger(int1) === false || Number.isInteger(int2) === false) {
+      return undefined;
     }
+    const div = Math.floor(int1 / int2);
+    return div;
   },
   sub: (int1, int2) => {
-    if (Number.isInteger(int1) && Number.isInteger(int2)) {
-      const sub = int1 - int2;
-      return sub;
+    if (Number.isInteger(int1) === false || Number.isInteger(int2) === false) {
+      return undefined;
     }
+    const sub = int1 - int2;
+    return sub;
   },
 };
 
