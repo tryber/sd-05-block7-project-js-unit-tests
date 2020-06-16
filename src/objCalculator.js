@@ -19,6 +19,35 @@
   calculator.div(3, 2) // Retorno: 1;
 */
 
-const calculator = {};
+const calculator = {
+  add: (int1, int2) => {
+    if (Number.isInteger(int1) === false || Number.isInteger(int2) === false) {
+      return undefined;
+    }
+    const add = int1 + int2;
+    return add;
+  },
+  mult: (int1, int2) => {
+    if (Number.isInteger(int1) === false || Number.isInteger(int2) === false) {
+      return undefined;
+    }
+    const mult = int1 * int2;
+    return mult;
+  },
+  div: (int1, int2) => {
+    if (Number.isInteger(int1) === false || Number.isInteger(int2) === false) {
+      return undefined;
+    }
+    const div = Math.floor(int1 / int2);
+    return div;
+  },
+  sub: (int1, int2) => {
+    if (Number.isInteger(int1) === false || Number.isInteger(int2) === false) {
+      return undefined;
+    }
+    const sub = int1 - int2;
+    return sub;
+  },
+};
 
 module.exports = calculator;
