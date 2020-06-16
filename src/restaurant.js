@@ -45,7 +45,6 @@
 
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
 
-
 //
 // Agora faça o TESTE 2 no arquivo `tests/restaurant.spec.js`.
 
@@ -54,8 +53,6 @@
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
 //
 
-
-
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
@@ -63,8 +60,6 @@
 // PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
 // DICA: para criar isso, você vai precisar definir a função `createMenu()`, definir o objeto que a `createMenu()` define separadamente dela e, depois, a função que será definida em `order`.
 // ```
-
-
 
 //  const restaurant = {
 //    order
@@ -83,17 +78,28 @@
 
 const createMenu = (objeto) => ({
   fetchMenu: objeto,
-  consumption: [],   
-  order: function(item) {
+  consumption: [],
+  order: function (item) {
     this.consumption.push(item);
   },
-  pay: function() {   
-    let foodsPrice = this.fetchMenu.food[this.consumption[0]] 
-    let drinksPrice = this.fetchMenu.drink[this.consumption[1]]
-    
-    return drinks
-  }
-});
+  pay: function () {
+    let somaDasOrders = 0;
+    for (let i = 0; i < this.consumption.length; i += 1) {
+      if (this.fetchMenu.food[this.consumption[i]]) {
+        somaDasOrders += this.fetchMenu.food[this.consumption[i]];
+      } else {
+        somaDasOrders += this.fetchMenu.drink[this.consumption[i]];
+      }
+    }
 
+    // let foodsPrice = this.fetchMenu.food[this.consumption[0]]
+    // let drinksPrice = this.fetchMenu.drink[this.consumption[1]]
+    let somaDasOrdersMais10porcent = somaDasOrders * 1.1;
+
+    return parseFloat(
+      Number.parseFloat(somaDasOrdersMais10porcent).toPrecision(4)
+    );
+  },
+});
 
 module.exports = createMenu;

@@ -57,8 +57,10 @@ describe('#createMenu', () => {
       typeof createMenu({ food: { coxinha: 3.9, sanduiche: 9.9 } }),
       'object'
     );
-    assert.deepEqual(Object.entries((createMenu({ food: { coxinha: 3.9, sanduiche: 9.9 } })))[0] , 
-    ["fetchMenu", {"food": {"coxinha": 3.9, "sanduiche": 9.9}}])
+    assert.deepEqual(
+      Object.entries(createMenu({ food: { coxinha: 3.9, sanduiche: 9.9 } }))[0],
+      ['fetchMenu', { food: { coxinha: 3.9, sanduiche: 9.9 } }]
+    );
     // createMenu(objetoQualquer) // Retorno: { fetchMenu: objetoQualquer }
     // ```
     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
@@ -117,24 +119,34 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
     // TESTE 7: Verifique que a função `order` aceita que pedidos repetidos sejam acrescidos a consumption.
     // ```
-    objetoRetornado = createMenu({ food: {}, drink: {} })
+    objetoRetornado = createMenu({ food: {}, drink: {} });
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
-    assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha', 'agua', 'coxinha'])
-    objetoRetornado.comsuption // Retorno: ['coxinha', 'agua', 'coxinha']
+    assert.deepStrictEqual(objetoRetornado.consumption, [
+      'coxinha',
+      'agua',
+      'coxinha',
+    ]);
+    objetoRetornado.comsuption; // Retorno: ['coxinha', 'agua', 'coxinha']
     // ```
     // Agora faça o TESTE 8 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 8: Verifique que, ao chamar `objetoRetornado.pay()`, retorna-se a soma dos preços de tudo que foi pedido, conforme registrado em `objetoRetornado.consumption`
     // ```
-    objetoRetornado = createMenu({ food: {'coxinha': 3.90}, drink: {'agua': 3.90} })
-    assert.deepStrictEqual(objetoRetornado.fetchMenu, { food: {'coxinha': 3.90}, drink: {'agua': 3.90} })
+    objetoRetornado = createMenu({
+      food: { coxinha: 3.9 },
+      drink: { agua: 3.9 },
+    });
+    assert.deepStrictEqual(objetoRetornado.fetchMenu, {
+      food: { coxinha: 3.9 },
+      drink: { agua: 3.9 },
+    });
     objetoRetornado.order('coxinha');
     objetoRetornado.order('agua');
     objetoRetornado.order('coxinha');
-    let somaDosPreçosDosPedidos = objetoRetornado.pay()
-    assert.deepStrictEqual(somaDosPreçosDosPedidos, 11.70)
+    let somaDosPreçosDosPedidos = objetoRetornado.pay();
+    assert.deepStrictEqual(somaDosPreçosDosPedidos, 12.87);
     // objetoRetornado.pay() // Retorno: somaDosPreçosDosPedidos
     // ```
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
