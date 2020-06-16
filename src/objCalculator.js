@@ -5,14 +5,14 @@
     - div;
     - sub.
   Para cada uma delas atribua uma função que realiza a respectiva operação.
-  A função deve receber dois numABs e retornar um numAB.
+  A função deve receber dois numBs e retornar um numB.
   Os resultados das divisões devem sempre ser arredondados para baixo.
 
   Faça as funções com arrow functions!
 
   Parâmetros:
-  - Um número numAB;
-  - Um número numAB;
+  - Um número numB;
+  - Um número numB;
 
   Comportamento:
   calculator.add(1, 1) // Retorno: 2;
@@ -20,10 +20,10 @@
 */
 
 const calculator = {
-    add: (numA, numAB) => Math.round(numA + numAB),
-    mult: (numA, numAB) => Math.round(numA * numAB),
-    div: (numA, numAB) => Math.floor(numA / numAB),
-    sub: (numA, numAB) => Math.round(numA - numAB),
+  add: (numA, numB) => Math.round(numA + numB),
+  mult: (numA, numB) => Math.round(numA * numB),
+  div: (numA, numB) => Math.floor(numA / numB),
+  sub: (numA, numB) => Math.round(numA - numB),
 };
 
 module.exports = calculator;
