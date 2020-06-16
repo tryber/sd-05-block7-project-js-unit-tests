@@ -24,6 +24,52 @@
 
   meuRestaurante.pay() // Retorno: 3.9
 
+  */
+ /*  const createMenu = obj => ({
+    fetchMenu: () => obj
+  })
+  const meuRestaurante = createMenu({
+    food: {'coxinha': 3.90, 'sanduiche': 9.90},
+    drinks: {'agua': 3.90, 'cerveja': 6.90}
+  });
+  meuRestaurante.fetchMenu();
+  meuRestaurante.order = (string) => string
+  meuRestaurante.consumption = []
+  meuRestaurante.consumption.push(meuRestaurante.order('coxinha'))
+  meuRestaurante.pay = (consumption) => {
+    consumption = meuRestaurante.consumption
+    let soma = 0;
+      for( i = 0; i < consumption.length ; i += 1) {
+        if(meuRestaurante.fetchMenu().food[consumption[i]] !== undefined)
+       soma += meuRestaurante.fetchMenu().food[consumption[i]];
+      
+      };
+  }
+
+
+  meuRestaurante.order('coxinha')
+  console.log(meuRestaurante.order('coxinha'))
+  console.log(meuRestaurante.consumption)
+  console.log(meuRestaurante.pay()) */
+  /* 
+    'consumption' : [],
+    order: (string) => {
+      createMenu[consumption].push(string)
+    },
+
+    pay: () => { 
+      let soma = 0;
+      for( i = 0; i < consumption.length ; i += 1) {
+        if(fetchMenu.food[consumption[i]] !== undefined)
+       soma += fetchMenu.food[consumption[i]];
+        if(fetchMenu.drink[consumption[i]] !== undefined) 
+       soma += fetchMenu.drink[consumption[i]];
+      };
+    } 
+  });
+ */
+  
+  /*
   Uma função createMenu retorna um objeto com as seguintes características:
   - Uma chave `fetchMenu` retorna o objeto que a função `createMenu` recebe por parâmetro. O menu tem sempre duas chaves, `food` e `drink`, no seguinte formato:
 
@@ -71,6 +117,37 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const createMenu = obj => ({
+  'fetchMenu': obj,
+  'consumption':[],
+});
+const meuRestaurante = createMenu({
+  food: {'coxinha': 3.90, 'sanduiche': 9.90},
+  drinks: {'agua': 3.90, 'cerveja': 6.90}
+});
 
+meuRestaurante.order = (string) => consumed(string)
+function consumed (string) {
+  meuRestaurante.consumption.push(string);
+}
+
+meuRestaurante.pay = () => {
+  let consumo = meuRestaurante.consumption
+  let contaAPagar = 0
+  for( index in consumo){
+    let comidas = Object.entries(meuRestaurante.fetchMenu.food); 
+    let bebidas = Object.entries(meuRestaurante.fetchMenu.drinks);
+    for(let i = 0; i < comidas.length ; i += 1) {
+      if(consumo[index] === comidas[i][0]){
+        contaAPagar += comidas[i][1]
+      }
+    }
+    for(let i = 0; i < bebidas.length ; i += 1) {
+      if(consumo[index] === bebidas[i][0]){
+        contaAPagar += bebidas[i][1]
+      }
+    }
+  }
+  return (contaAPagar + contaAPagar*0.1)
+}
 module.exports = createMenu;
