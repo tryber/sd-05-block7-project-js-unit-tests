@@ -94,7 +94,7 @@ const createMenu = (myMenu) => {
         }
       }
       return somaTotal;
-    }
+    },
   };
   return restaurant;
 };
