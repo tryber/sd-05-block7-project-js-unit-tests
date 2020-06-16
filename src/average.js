@@ -16,17 +16,17 @@
 const average = (array) => {
   if (array.length === 0) return undefined;
   let somaValores = 0;
-  for (let i = 0; i < array.length; i += 1){
-    if (typeof  array[i] !== 'number') return undefined;
+  for (let i = 0; i < array.length; i += 1) {
+    if (typeof array[i] !== 'number') return undefined;
     somaValores += array[i];
-  };
+  }
   return Math.round(somaValores / array.length);
 };
 
 module.exports = average;
 
-console.log(average([10, 10])); //ok
-console.log(average([])); //ok
-console.log(average([1, 2, '3', 5, '12'])) // ok
-console.log(typeof average) //ok
-console.log(average[1, 2.5])
+//console.log(average([10, 10])); //ok
+//console.log(average([])); //ok
+//console.log(average([1, 2, '3', 5, '12'])) // ok
+//console.log(typeof average) //ok
+//console.log(average[1, 2.5])
