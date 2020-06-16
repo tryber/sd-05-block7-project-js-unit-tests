@@ -24,9 +24,3 @@ const average = (array) => {
 };
 
 module.exports = average;
-
-//console.log(average([10, 10])); //ok
-//console.log(average([])); //ok
-//console.log(average([1, 2, '3', 5, '12'])) // ok
-//console.log(typeof average) //ok
-//console.log(average[1, 2.5])
