@@ -17,15 +17,17 @@
 */
 
 const vqv = (nome, idade) => {
-  if (nome===undefined && idade===undefined) {
-    return undefined;
+let frase
+  if (nome === undefined && idade === undefined) {
+    frase = undefined;
   } else {
-    return (
-    `Oi, meu nome é ${nome}!
-    Tenho ${idade} anos,
-    trabalho na Trybe e mando muito em programação!
-    #VQV!`);
-  };
+  frase = (
+`Oi, meu nome é ${nome}!
+Tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`)
+}
+return frase;
 };
 
 vqv('tunico', '30');
