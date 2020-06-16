@@ -30,12 +30,8 @@ const vqv = (nome, idade) => {
     idade !== undefined
   ) {
     const frase3 =
-      'Oi, meu nome é ' +
-      `${nome}` +
-      '!\n' +
-      'Tenho ' +
-      idade +
-      ' anos,\n' +
+      `Oi, meu nome é ${nome}!\n` +
+      `Tenho ${idade} anos,\n` +
       'trabalho na Trybe e mando muito em programação!\n' +
       '#VQV!';
     return frase3;
@@ -44,3 +40,4 @@ const vqv = (nome, idade) => {
 };
 
 module.exports = vqv;
+console.log(vqv('fas,34'));
