@@ -19,12 +19,12 @@ const createStudent = (nome) => {
   const objeto = {
     name: nome,
     feedback: () => {
-      return 'Eita pessoa boa!'
+      return 'Eita pessoa boa!';
     }
-  }
-  return objeto
+  };
+  return objeto;
 };
-const estudante = createStudent('Leandrão, o Lobo Solitário')
-console.log(estudante.name)
-console.log(estudante.feedback())
+const estudante = createStudent('Leandrão, o Lobo Solitário');
+console.log(estudante.name);
+console.log(estudante.feedback());
 module.exports = createStudent;
