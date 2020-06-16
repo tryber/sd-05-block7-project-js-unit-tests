@@ -82,7 +82,7 @@ const createMenu = (objeto) => {
     fetchMenu: objeto,
     consumption: [],
     order: request => objetoMenu.consumption.push(request),
-    };
+  };
   return objetoMenu;
 };
 
