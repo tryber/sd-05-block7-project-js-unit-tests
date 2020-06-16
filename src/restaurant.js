@@ -88,7 +88,7 @@ function functionPay(restaurant) {
 }
 
 const createMenu = (myMenu) => {
-  let restaurant = {
+  const restaurant = {
     fetchMenu: myMenu,
     consumption: [],
     order: (request) => {
