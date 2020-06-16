@@ -73,7 +73,7 @@
 
 const createMenu = (objetoQualquer) => {
   const obj = {
-    fetchMenu: objetoQualquer
+    fetchMenu: objetoQualquer,
   };
   return obj;
 };
