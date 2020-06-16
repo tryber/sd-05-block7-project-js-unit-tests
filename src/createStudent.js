@@ -16,10 +16,11 @@
 */
 
 const createStudent = (nome) => {
-  let Myobj = {
+  const Myobj = {
     name: nome,
-    feedback: () => 'Eita pessoa boa!',  };
-   return Myobj;
+    feedback: () => 'Eita pessoa boa!',
+  };
+  return Myobj;
 };
 /*
 const estudante = createStudent('Leandrão, o Lobo Solitário')
