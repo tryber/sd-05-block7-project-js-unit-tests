@@ -24,6 +24,6 @@ const average = (media) => {
     }
     soma += media[n];
   }
-  return Math.round (soma / media.length);
+  return Math.round(soma / media.length);
 };
 module.exports = average;
