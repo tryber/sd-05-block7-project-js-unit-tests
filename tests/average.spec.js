@@ -28,7 +28,7 @@ assert.strictEqual(average([1, 2, '3']), undefined);
 assert.strictEqual(average([1, 2, 3]), 2);
 assert.strictEqual(average([0, 0, 0, 0, 0, 0, 1]), 0);
 
-//assert.strictEqual(average([]), undefined);
+assert.strictEqual(average([]), undefined);
 assert.strictEqual(average([' ']), undefined);
 assert.strictEqual(average(['um', 'dois', 'tres']), undefined);
 assert.strictEqual(average([47, 63, 122]), 77);
