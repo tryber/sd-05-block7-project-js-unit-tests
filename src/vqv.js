@@ -40,4 +40,3 @@ const vqv = (nome, idade) => {
 };
 
 module.exports = vqv;
-console.log(vqv('fas,34'));
