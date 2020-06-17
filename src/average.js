@@ -16,7 +16,7 @@ const average = (valorNumerico) => {
   return undefined;
   }
   let soma = 0;
-  for (let i = 0; i < valorNumerico.length; i+ = 1) {
+  for (let i=0; i<valorNumerico.length; i+=1) {
     if (typeof valorNumerico[i] !== 'number') {
       return undefined;
     }
