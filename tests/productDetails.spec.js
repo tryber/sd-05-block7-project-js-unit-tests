@@ -56,11 +56,11 @@ describe('#productDetails', () => {
     assert.strictEqual(
       productDetails('alcool', 'masc')[0].details.productId.includes(
         '123',
-        productDetails('alcool', 'masc')[0].details.productId.length - 4
+        productDetails('alcool', 'masc')[0].details.productId.length - 3
       ) &&
         productDetails('alcool', 'masc')[0].details.productId.includes(
           '123',
-          productDetails('alcool', 'masc')[1].details.productId.length - 4
+          productDetails('alcool', 'masc')[1].details.productId.length - 3
         ),
       true
     );
