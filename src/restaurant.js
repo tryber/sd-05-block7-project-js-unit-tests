@@ -85,8 +85,8 @@ const createMenu = (menu) => {
   let bill = 0;
 
   function sumBill(valor) {
-    bill += valor
-  };
+    bill += valor;
+  }
 
   const pickPay = () => {
     const foods = restaurant.fetchMenu.food;
