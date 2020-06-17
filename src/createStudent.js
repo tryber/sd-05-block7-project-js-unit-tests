@@ -14,7 +14,7 @@
     estudante.name // Retorna: 'Leandrão, o Lobo Solitário'
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
-/*
+
 function createStudent(nome) {
   const estudante = {
     name: nome,
@@ -26,5 +26,5 @@ function createStudent(nome) {
   return estudante;
 }
 
-module.exports = createStudent;*/
+module.exports = createStudent;
 
