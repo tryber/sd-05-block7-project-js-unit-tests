@@ -69,8 +69,8 @@ describe("#createMenu", () => {
     // objetoRetornado.fetchMenu // Retorno: { food: {}, drink: {}}
     // ```
     const objetoVazio = { food: {}, drink: {} };
-    let objetoRetornado = createMenu(objetoVazio);
-    assert.strictEqual(objetoRetornado.fetchMenu, objetoVazio);
+    const objetoRetornadoVazio = createMenu(objetoVazio);
+    assert.strictEqual(objetoRetornadoVazio.fetchMenu, objetoVazio);
     // Agora faça o TESTE 3 deste arquivo.
     // --------------------------------------------------------------------------------------
     // TESTE 3: Verifique que o menu passado pra função createMenu é identico ao menu recuperado pela função 'objetoRetornado.fetchMenu'
@@ -78,7 +78,7 @@ describe("#createMenu", () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.fetchMenu // Retorno: objetoQualquer
     // ```
-    objetoRetornado = createMenu(objetoQualquer);
+    let objetoRetornado = createMenu(objetoQualquer);
     assert.deepStrictEqual(objetoRetornado.fetchMenu, objetoQualquer);
     // Agora faça o TESTE 4 deste arquivo.
     // --------------------------------------------------------------------------------------
@@ -87,7 +87,8 @@ describe("#createMenu", () => {
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.consumption // Retorno: []
     // ```
-    assert.deepStrictEqual(createMenu(objetoQualquer).consumption, []);
+    objetoRetornado = createMenu(objetoQualquer);
+    assert.deepStrictEqual(objetoRetornado.consumption, []);
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
     // TESTE 5: Verifique que chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro, como `objetoRetornado.order('coxinha')`, tal string é adicionada ao array retornado em `objetoRetornado.consumption
@@ -98,6 +99,7 @@ describe("#createMenu", () => {
     // ```
     // Retorno: ["coxinha"]
     objetoRetornado.order("coxinha");
+    console.log(objetoRetornado);
     assert.deepStrictEqual(objetoRetornado.consumption, ['coxinha']);
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
