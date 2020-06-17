@@ -18,7 +18,7 @@
   calculator.add(1, 1) // Retorno: 2;
   calculator.div(3, 2) // Retorno: 1;
 */
-/*
+
 const calculator = {
   add: function add(n1, n2) {
     return n1 + n2;
@@ -39,4 +39,4 @@ const calculator = {
   },
 };
 
-module.exports = calculator;*/
+module.exports = calculator;
