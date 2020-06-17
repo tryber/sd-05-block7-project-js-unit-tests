@@ -14,7 +14,7 @@
 
 const average = (arr) => {
   if (!arr.length || arr.find(item => typeof item !== 'number')) return undefined;
-  const sum = arr.reduce((soma, item) => soma += item, 0);
+  const sum = arr.reduce(function(soma, item){ return soma + item }, 0);
   return Math.round(sum / arr.length);
 };
 
