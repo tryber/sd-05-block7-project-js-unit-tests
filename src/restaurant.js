@@ -84,17 +84,28 @@ const createMenu = objeto => ({
   },
   pay() {
     let somaDasOrders = 0;
-    for (item in this.consumption) {
-      if (objeto.food[this.consumption[item]]) {
-        somaDasOrders += objeto.food[this.consumption[item]];
+    this.consumption.forEach((item) => {
+      if (objeto.food[item]) {
+        somaDasOrders += objeto.food[item];
       } else {
-        somaDasOrders += objeto.drink[this.consumption[item]];
+        somaDasOrders += objeto.drink[item];
       }
-    }
-    // const somaDasOrdersMais10porcent = (somaDasOrders * 1.1);
-
+    });
     return parseFloat((somaDasOrders * 1.1).toPrecision(4));
   },
 });
 
 module.exports = createMenu;
+
+// objetoRetornado = createMenu({
+//   food: { coxinha: 3.9 },
+//   drink: { agua: 3.9 },
+// });
+
+// objetoRetornado.order('coxinha');
+// objetoRetornado.order('agua');
+// objetoRetornado.order('coxinha');
+
+// console.log(objetoRetornado);
+
+// console.log(objetoRetornado.pay());
