@@ -83,9 +83,9 @@ const createMenu = (menu) => {
   };
   const qtItem = item => restaurant.consumption.filter(cons => cons === item).length;
   let bill = 0;
-  
+
   function sumBill(valor) {
-    bill += valor;
+    bill += valor
   };
 
   const pickPay = () => {
