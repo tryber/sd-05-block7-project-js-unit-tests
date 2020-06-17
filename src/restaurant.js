@@ -44,6 +44,7 @@
 */
 
 // PASSO 1: Crie uma função `createMenu()` que, dado um objeto passado por parâmetro, retorna um objeto com o seguinte formato: { fetchMenu: objetoPassadoPorParametro }.
+
 //
 // Agora faça o TESTE 2 no arquivo `tests/restaurant.spec.js`.
 
@@ -51,6 +52,7 @@
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu` uma chave `consumption` que, como valor inicial, tem um array vazio.
 //
+
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
@@ -58,7 +60,10 @@
 // PASSO 3: Crie uma função, separada da função `createMenu()`, que, dada uma string recebida por parâmetro, adiciona essa string ao array de `objetoRetornado.consumption`. Adicione essa função à chave `order`.
 // DICA: para criar isso, você vai precisar definir a função `createMenu()`, definir o objeto que a `createMenu()` define separadamente dela e, depois, a função que será definida em `order`.
 // ```
-// const restaurant = {}
+
+//  const restaurant = {
+//    order
+//  }
 
 //
 // const createMenu = (myMenu) => // Lógica que edita o objeto `restaurant`
@@ -71,6 +76,36 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const createMenu = objeto => ({
+  fetchMenu: objeto,
+  consumption: [],
+  order(item) {
+    this.consumption.push(item);
+  },
+  pay() {
+    let somaDasOrders = 0;
+    this.consumption.forEach((item) => {
+      if (objeto.food[item]) {
+        somaDasOrders += objeto.food[item];
+      } else {
+        somaDasOrders += objeto.drink[item];
+      }
+    });
+    return parseFloat((somaDasOrders * 1.1).toPrecision(4));
+  },
+});
 
 module.exports = createMenu;
+
+// objetoRetornado = createMenu({
+//   food: { coxinha: 3.9 },
+//   drink: { agua: 3.9 },
+// });
+
+// objetoRetornado.order('coxinha');
+// objetoRetornado.order('agua');
+// objetoRetornado.order('coxinha');
+
+// console.log(objetoRetornado);
+
+// console.log(objetoRetornado.pay());
