@@ -14,15 +14,8 @@
 
 const average = (arr) => {
   let sum = 0;
-  if (arr.length === 0) {
-    return undefined;
-  }
-  for (let item = 0; item < arr.length; item += 1) {
-    if (typeof arr[item] !== 'number') {
-      return undefined;
-    }
-    sum += arr[item];
-  }
+  if (!arr.length || arr.find((item) => typeof item !== 'number')) return undefined;
+  arr.forEach((item) => sum += item);
   return Math.round(sum / arr.length);
 };
 
