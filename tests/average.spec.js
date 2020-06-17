@@ -2,6 +2,7 @@
 
 const assert = require('assert');
 const average = require('../src/average');
+const circle = require('../src/circle');
 
 /*
   A função average recebe um array (tamanho variável) e retorna a média dos valores recebidos.
