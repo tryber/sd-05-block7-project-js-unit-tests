@@ -22,12 +22,12 @@ const circle = require('../src/circle');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-/*
-//describe('#circle', () => {
-  //it('given a radius, should return an object with circles info', () => {
-    //assert.fail();
-    // ESCREVA SEUS TESTES ABAIXO:
-    // Teste se circle retorna um objeto.
+
+describe('#circle', () => {
+  it('given a radius, should return an object with circles info', () => {
+    assert.fail();
+    //ESCREVA SEUS TESTES ABAIXO:
+    //Teste se circle retorna um objeto.
     assert.strictEqual(typeof circle(5),'object');
     // Teste se o objeto retornado tem 3 entradas.
     const nEntradas = Object.keys(circle(5));
@@ -42,6 +42,5 @@ const circle = require('../src/circle');
     assert.strictEqual(parseFloat((obj.area).toPrecision(4)),28.26);
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     assert.deepEqual(obj,{ radius: 3, area: 28.259999999999998, circumference: 18.84 });
-  //});
-//});
-*/
+  });
+});

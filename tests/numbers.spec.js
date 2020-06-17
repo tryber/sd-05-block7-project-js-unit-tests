@@ -15,22 +15,19 @@ const numbers = require('../src/numbers');
 
   OBS: Lembre-se que você não precisa se preocupar com o describe e o it por enquanto, isso será aprendido posteriormente.
 */
-/*
-//describe('#numbers', () => {
-  //it('should return an array and return if it has only numbers or not', () => {
-  //  assert.fail();
-     //Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
-     let arrayNovo = [1, 2, 3, 4, 5];
-     assert.strictEqual(numbers(arrayNovo),true);
+
+describe('#numbers', () => {
+  it('should return an array and return if it has only numbers or not', () => {
+    //Escreva um teste em que a função recebe [1, 2, 3, 4, 5] e retorna true
+    assert.strictEqual(numbers([1, 2, 3, 4, 5]), true);
     // Escreva um teste em que a função recebe [1, 2, '3', 4, 5] e retorna false
     arrayNovo = [1, 2, '3', 4, 5];
-    assert.strictEqual(numbers(arrayNovo),false);
+    assert.strictEqual(numbers(arrayNovo), false);
     // Escreva um teste em que a função recebe [1, 'a', 3] e retorna false
     arrayNovo = [1, 'a', 3];
-    assert.strictEqual(numbers(arrayNovo),false);
+    assert.strictEqual(numbers(arrayNovo), false);
     // Escreva um teste em que a função recebe [' '] e retorna false
     arrayNovo = [' '];
-    assert.strictEqual(numbers(arrayNovo),false);
-//  });
-//});*/
-
+    assert.strictEqual(numbers(arrayNovo), false);
+  });
+});
