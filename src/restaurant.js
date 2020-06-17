@@ -73,27 +73,17 @@
 // let restaurant = {};
 const orderFromMenu = (request) => {
   Object.values(restaurant)[1].push(request);
-}
+};
 
 const createMenu = (menu) => {
   restaurant = {
     fetchMenu: menu,
-    consumption : [],
+    consumption: [],
     order: orderFromMenu,
-  }
+  };
   // restaurant.order = order;
 
   return restaurant;
 };
-
-
-const teste = {
-  food: {'coxinha': 3.90, 'sanduiche': 9.90},
-  drinks: {'agua': 3.90, 'cerveja': 6.90}
-}
-
-const objRetornado = createMenu(teste);
-objRetornado.order('coxinha');
-// console.log(objRetornado)
 
 module.exports = createMenu;
