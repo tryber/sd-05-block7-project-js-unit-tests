@@ -81,15 +81,20 @@ const createMenu = (menu) => {
     consumption: [],
     order: orderFromMenu,
   };
-  const qtItem = (item) => restaurant.consumption.filter(cons => cons === item).length;
+  const qtItem = item => restaurant.consumption.filter(cons => cons === item).length;
+  let bill = 0;
+  
+  function sumBill(valor) {
+    bill += valor;
+  };
+
   const pickPay = () => {
-    let bill = 0;
     const foods = restaurant.fetchMenu.food;
     const drinks = restaurant.fetchMenu.drinks;
-    Object.keys(foods).forEach(item => bill += qtItem(item) * foods[item]);
-    Object.keys(drinks).forEach(item => bill += qtItem(item) * drinks[item]);
+    Object.keys(foods).forEach(item => sumBill(qtItem(item) * foods[item]));
+    Object.keys(drinks).forEach(item => sumBill(qtItem(item) * drinks[item]));
     return (bill * 1.1).toFixed(2);
-  }
+  };
   restaurant.pay = pickPay;
 
   return restaurant;
