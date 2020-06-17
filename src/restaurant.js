@@ -81,7 +81,6 @@ const createMenu = (menu) => {
     consumption: [],
     order: orderFromMenu,
   };
-  // restaurant.order = order;
 
   return restaurant;
 };
