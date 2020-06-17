@@ -1,10 +1,10 @@
 /* eslint-disable max-len*/
 /* eslint-disable no-unused-vars */
-/*
+
 const assert = require('assert');
 const productDetails = require('../src/productDetails');
 
-
+/*
   Dadas duas strings que representam nomes de produtos, retorne um array contendo dois objetos com os detalhes dos respectivos produtos.
 
   Parâmetros:
@@ -33,12 +33,19 @@ const productDetails = require('../src/productDetails');
 
 describe('#productDetails', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
+    
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste que o retorno da função é um array.
+    assert.strictEqual(Array.isArray(productDetails('Sabão em pó', 'Camarão')), true);
     // Teste que o array retornado pela função contém dois itens dentro.
+    assert.strictEqual(productDetails.length, 2);
     // Teste que os dois itens dentro do array retornado pela função são objetos.
+    assert.strictEqual((typeof productDetails()[0] && typeof productDetails()[1]),'object');
     // Teste que os dois objetos são diferentes entre si.
-    // (Difícil) Teste que os dois productIds terminam com 123.
+    assert.notStrictEqual(productDetails('Sabão em pó', 'Camarão')[0], productDetails('Sabão em pó', 'Camarão')[1]);
+    // Teste que os dois productIds terminam com 123.
+    let pr123 = productDetails('Sabão em pó', 'Camarão')[0].details.productId; 
+    assert.strictEqual(pr123.includes('123', pr123.length - 7), true);
   });
 });
+
