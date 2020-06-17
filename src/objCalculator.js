@@ -20,9 +20,9 @@
 */
 
 const calculator = {
-  add: add = (a, b) => { return (a + b);},
-  mult: mult = (a, b) => { return (a * b);},
-  div: div = (a, b) => { const result = (a / b); return (Math.trunc(result));},
+  add: add = (a, b) => { return (a + b);} ,
+  mult: mult = (a, b) => { return (a * b);} ,
+  div: div = (a, b) => { const result = (a / b); return (Math.trunc(result));} ,
   sub: sub = (a, b) => { return (a - b);}
 };
 
