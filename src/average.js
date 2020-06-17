@@ -29,4 +29,4 @@ const average = (valor) => {
   return Math.round(media);
 };
 module.exports = average;
-console.log(average([]));
+
