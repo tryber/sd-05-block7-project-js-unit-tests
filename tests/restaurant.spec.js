@@ -51,7 +51,41 @@ const createMenu = require('../src/restaurant');
 
 describe('#createMenu', () => {
   it('tests the function has the correct behaviour', () => {
-    assert.fail();
+    //teste1 e 2 e 3
+    const teste = createMenu({ food: {}, drink: {} });
+    assert.deepStrictEqual(teste.fetchMenu, { food: {}, drink: {} } );
+    //teste4:
+    const teste4 = createMenu({ food: {}, drink: {} });
+    assert.deepStrictEqual(teste4.consumption, []);
+    //teste5:
+    const teste5 = createMenu({ food: {}, drink: {} });
+    teste5.order('coxinha');
+    assert.deepStrictEqual(teste5.consumption, ['coxinha']);
+    //teste6:
+    //["coxinha", "agua", "sopa", "sashimi"]
+    const teste6 = createMenu({ food: {}, drink: {} });
+    teste6.order('coxinha');
+    teste6.order('agua');
+    teste6.order('sopa');
+    teste6.order('sashimi');
+    assert.deepStrictEqual(teste6.consumption, ['coxinha', 'agua', 'sopa', 'sashimi']);
+
+    //teste7:
+    const teste7 = createMenu({ food: {}, drink: {} });
+    teste7.order('coxinha');
+    teste7.order('agua');
+    teste7.order('sopa');
+    teste7.order('sashimi');
+    teste7.order('agua');
+    assert.deepStrictEqual(teste7.consumption, ['coxinha', 'agua', 'sopa', 'sashimi', 'agua']);
+
+    //teste8:
+    const teste8 = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+    teste8.order('coxinha');
+    teste8.order('agua');
+    teste8.order('coxinha');
+    assert.strictEqual(teste8.pay(), 11.7);
+
     // TESTE 1: Verifique que, dado um objeto qualquer passado como um parâmetro para a função createMenu(), checa se o retorno da função é um objeto no seguinte formato: { fetchMenu: objetoQualquer }.
     // ```
     // createMenu(objetoQualquer) // Retorno: { fetchMenu: objetoQualquer }
