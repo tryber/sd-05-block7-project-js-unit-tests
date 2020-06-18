@@ -1,14 +1,17 @@
 /* eslint-disable max-len */
 
 /*
-  Você é responsável por escrever o código do sistema de pedidos de um restaurante. Deve ser possível, através desse sistema, cadastrar um menu. Dado que um menu foi cadastrado, o sistema deve disponibilizar um objeto através do qual se consegue:
+  Você é responsável por escrever o código do sistema de pedidos de um restaurante. 
+  Deve ser possível, através desse sistema, cadastrar um menu. 
+  Dado que um menu foi cadastrado, o sistema deve disponibilizar um objeto através do qual se consegue:
   - ler o menu cadastrado;
   - fazer pedidos;
   - verificar o que foi pedido;
   - somar o valor da conta.
 
   A estrutura deste código e deste objeto já foi definida e você irá implementá-la.
-  Abaixo você verá uma série de testes e passos que devem ser, NECESSARIAMENTE, feitos em ordem para o bom desenvolvimento do sistema. Eles guiarão você pelo desenvolvimento.
+  Abaixo você verá uma série de testes e passos que devem ser, NECESSARIAMENTE, 
+  feitos em ordem para o bom desenvolvimento do sistema. Eles guiarão você pelo desenvolvimento.
 
   Parâmetros:
   - Um objeto. Exemplos: { food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }.
@@ -71,6 +74,33 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+const restaurant = {};
+
+const orderFromMenu = (request) => {
+  restaurant.consumption.push(request);
+};
+
+const checkPay = () => {
+  let sum = 0;
+
+  for (let i = 0; i < restaurant.consumption.length; i += 1) {
+    if (restaurant.fetchMenu.food[restaurant.consumption[i]]) {
+      sum += restaurant.fetchMenu.food[restaurant.consumption[i]];
+    }
+    if (restaurant.fetchMenu.drinks[restaurant.consumption[i]]) {
+      sum += restaurant.fetchMenu.drinks[restaurant.consumption[i]];
+    }
+  }
+
+  return (sum + (sum * 0, 10)).toFixed(2);
+};
+
+const createMenu = (objetoMenu) => {
+  restaurant.fetchMenu = objetoMenu;
+  restaurant.consumption = [];
+  restaurant.order = orderFromMenu;
+  restaurant.pay = checkPay;
+  return restaurant;
+};
 
 module.exports = createMenu;
