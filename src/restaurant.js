@@ -81,7 +81,7 @@ const createMenu = (objeto) => {
   const consumption = [];
   const conta = () => {
     let soma = 0;
-    consumption.forEach(item => {
+    consumption.forEach((item) => {
       if (objeto.food[item] !== undefined) {
         soma += objeto.food[item];
       } else {
@@ -98,15 +98,7 @@ const createMenu = (objeto) => {
     order: request => consumption.push(request),
     pay: () => conta(),
 
-  }
+  };
 };
 
 module.exports = createMenu;
-
-const teste = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
-teste.order('coxinha');
-teste.order('sopa');
-teste.order('agua');
-teste.order('coxinha');
-console.log(teste.consumption);
-console.log(teste.pay());
