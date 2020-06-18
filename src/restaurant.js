@@ -79,31 +79,34 @@
 
 const createMenu = (objeto) => {
   const consumption = [];
+  const conta = () => {
+    let soma = 0;
+    consumption.forEach(item => {
+      if (objeto.food[item] !== undefined) {
+        soma += objeto.food[item];
+      } else {
+        soma += objeto.drink[item];
+      }
+    });
+    return Number(soma.toFixed(2));
+  };
+
 
   return {
     fetchMenu: objeto,
     consumption,
     order: request => consumption.push(request),
-    pay: () => {
-      /* let soma = 0;
-      for (item of consumption) {
-        if (objeto.food[item] !== undefined) {
-          soma += objeto.food[item];
-        } else {
-          soma += objeto.drink[item];
-        }
-      }
-      return Number(soma.toFixed(2)); */
-    },
-  };
+    pay: () => conta(),
+
+  }
 };
 
 module.exports = createMenu;
 
-/* const teste = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
+const teste = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} });
 teste.order('coxinha');
 teste.order('sopa');
 teste.order('agua');
 teste.order('coxinha');
 console.log(teste.consumption);
-console.log(teste.pay()); */
+console.log(teste.pay());
