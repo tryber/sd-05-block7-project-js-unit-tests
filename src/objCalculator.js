@@ -22,8 +22,9 @@
 const calculator = {
   add: (a, b) => (a + b),
   mult: (a, b) => (a * b),
-  div: (a, b) => Meth.floor(a / b),
+  div: (a, b) => (Math.floor(a / b)),
   sub: (a, b) => a - b,
 };
 
+console.log(calculator.div(5, 2))
 module.exports = calculator;
