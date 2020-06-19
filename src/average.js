@@ -27,3 +27,4 @@ const average = (media) => {
   return Math.round(soma / media.length);
 };
 module.exports = average;
+
