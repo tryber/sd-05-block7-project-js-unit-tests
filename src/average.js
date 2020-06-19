@@ -16,7 +16,7 @@ const average = (array) => {
   // add your implementation here
   let soma = 0;
 
-  if (array === 0) {
+  if (array.length === 0) {
     return undefined;
   }
   for (i = 0; i < array.length; i += 1) {
@@ -30,3 +30,6 @@ const average = (array) => {
 };
 
 module.exports = average;
+
+console.log(average([]));
+
