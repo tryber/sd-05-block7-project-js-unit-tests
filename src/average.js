@@ -13,7 +13,7 @@
 */
 const average = (valorNumerico) => {
   if (valorNumerico.length === 0) {
-  return undefined;
+    return undefined;
   }
   let soma = 0;
   for (let i = 0; i < valorNumerico.length; i += 1) {
