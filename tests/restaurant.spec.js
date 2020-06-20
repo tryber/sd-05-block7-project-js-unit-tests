@@ -80,7 +80,7 @@ describe('#createMenu', () => {
     // --------------------------------------------------------------------------------------
     // TESTE 4: Verifique que 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
 
-    
+    assert.deepStrictEqual(Object.values(createMenu(objetoQualquer))[1], []);
 
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.consumption // Retorno: []
