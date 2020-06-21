@@ -21,12 +21,14 @@ const average = require('../src/average');
 describe('#average', () => {
   it("tests function average's behaviour as specified", () => {
     assert.strictEqual(average([3, 4, 5]), 4);
+    //if (average ([3, 4, 5]) === 4) return true;
+    //if (average ([3, 4, 5]) === 4) return true;
     assert.strictEqual(average([1, 2, 3, '4', 5]), undefined);
     assert.strictEqual(average([0, 0, 0, 0, 0, 0, 0]), 0);
     assert.strictEqual(average([1, 2, '3']), undefined);
     assert.strictEqual(average([1, 2, 3]), 2);
     assert.strictEqual(average([0, 0, 0, 0, 0, 0, 1]), 0);
-
+    assert.strictEqual(average([4, 2, 8, 10]), 6);
     assert.strictEqual(average([]), undefined);
     assert.strictEqual(average([' ']), undefined);
     assert.strictEqual(average(['um', 'dois', 'tres']), undefined);
@@ -37,3 +39,4 @@ describe('#average', () => {
     assert.strictEqual(average([-11, -5, 2]), -5);
   });
 });
+
