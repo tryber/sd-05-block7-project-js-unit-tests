@@ -27,7 +27,7 @@ function average(arr) {
   // math.round vai arredondar o numero decimal para um numero inteiro mais próximo.
 };
 
-console.log (average ([4, 2, 8, 10]));
+console.log (average([4, 2, 8, 10]));
 module.exports = average;
 
 /* const averageFuncao = average
