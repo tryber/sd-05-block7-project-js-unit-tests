@@ -19,15 +19,15 @@ function average(arr) {
     // se tipo do elemento na posicao do arr for diferente de numero ele retornará undefined.
     somaValores += arr[posicao];
     // somaValores = somaValores +arr[posicao];
-    // (1) 0 + 4 (2) 4 + 2 (3) 6 + 8 (4) 14 + 10 
+    // (1) 0 + 4 (2) 4 + 2 (3) 6 + 8 (4) 14 + 10
   }
   // quando o for acaba eu saio da chave, qual o valor guardado dentro de somaValores? = 24.
   return Math.round(somaValores / arr.length);
   // (24 / tamanho do array = 4) = (6)
   // math.round vai arredondar o numero decimal para um numero inteiro mais próximo.
-};
+}
 
-console.log (average([4, 2, 8, 10]));
+console.log(average([4, 2, 8, 10]));
 module.exports = average;
 
 /* const averageFuncao = average
