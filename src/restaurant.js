@@ -71,6 +71,31 @@
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` com uma função que varre todo os itens de `objetoRetornado.consumption`, soma o preço de todos checando-os no menu e retorna o valor somado acrescido de 10%. DICA: para isso, você precisará varrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
 
-const createMenu = () => {};
+let restaurant = {};
+
+const createMenu = (myMenu) => {
+  restaurant = {
+    fetchMenu: myMenu,
+    consumption: [],
+    order: (orderFromMenu = (request) => {
+      restaurant.consumption.push(request);
+    }),
+    pay: (payTotal = () => {
+      {
+        let sum = 0;
+        for (let i = 0; i < restaurant.consumption.length; i += 1) {
+          if (Object.keys(myMenu.food).includes(restaurant.consumption[i])) {
+            sum += myMenu.food[restaurant.consumption[i]];
+          } else {
+            sum += myMenu.drink[restaurant.consumption[i]];
+          }
+        }
+        restaurant.consumption = [];
+        return Number((1.1 * sum).toFixed(2));
+      }
+    }),
+  };
+  return restaurant;
+};
 
 module.exports = createMenu;
