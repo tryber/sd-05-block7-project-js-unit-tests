@@ -73,7 +73,7 @@
 
 
 const orderFromMenu = (request) => {
-  //let options = Object.entries(restaurant.fetchMenu.fetchMenu)
+  // let options = Object.entries(restaurant.fetchMenu.fetchMenu)
 
   restaurant.consumption.push(request);
   restaurant.consumption.sort();
@@ -96,7 +96,7 @@ const createMenu = (objeto) => {
   restaurant = {
     consumption: [],
     order: orderFromMenu,
-    fetchMenu: { fetchMenu:objeto },
+    fetchMenu: { fetchMenu: objeto },
     pay: payFunction,
   };
   return restaurant;
@@ -107,7 +107,7 @@ const testes = createMenu({food: {coxinha: 3.90, sanduiche: 9.90},
 console.log(testes.fetchMenu)
 testes.order({food: {coxinha: 3.90, sanduiche: 9.90},
   drinks: {agua: 3.90, cerveja: 6.90}});
-console.log(testes.pay()) 
+console.log(testes.pay())
 */
 
 module.exports = createMenu;
