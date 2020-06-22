@@ -85,10 +85,10 @@ const payFunction = () => {
     const chavesType = Object.keys(order);
     chavesType.forEach((chave) => {
       const chavesFoods = Object.keys(order[chave]);
-      chavesFoods.forEach(chaveFood => bill = bill+ order[chave][chaveFood]);
+      bill += chavesFoods.map(chaveFood =>  order[chave][chaveFood]).reduce((a,c) => a + c ,0);
     });
   });
-  return bill * 1.1;
+  return Math.round(bill * 1.1*100)/100;
 };
 
 
@@ -101,13 +101,13 @@ const createMenu = (objeto) => {
   };
   return restaurant;
 };
-/*
-const testes = createMenu({food: {coxinha: 3.90, sanduiche: 9.90},
+
+/* const testes = createMenu({food: {coxinha: 3.90, sanduiche: 9.90},
   drinks: {agua: 3.90, cerveja: 6.90}});
 console.log(testes.fetchMenu)
 testes.order({food: {coxinha: 3.90, sanduiche: 9.90},
   drinks: {agua: 3.90, cerveja: 6.90}});
 console.log(testes.pay())
-*/
+ */
 
 module.exports = createMenu;
