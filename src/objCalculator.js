@@ -20,10 +20,10 @@
 */
 
 const calculator = {
-  add: (valueNumberOne, valueNumberTwo) => Math.trunc(valueNumberOne + valueNumberTwo),
-  mult: (valueNumberOne, valueNumberTwo) => Math.trunc(valueNumberOne * valueNumberTwo), 
-  div: (valueNumberOne, valueNumberTwo) => Math.trunc(valueNumberOne / valueNumberTwo),
-  sub: (valueNumberOne, valueNumberTwo) => Math.trunc(valueNumberOne - valueNumberTwo)
+  add: (valueNumberOne, valueNumberTwo) => valueNumberOne + valueNumberTwo,
+  mult: (valueNumberOne, valueNumberTwo) => valueNumberOne * valueNumberTwo,
+  div: (valueNumberOne, valueNumberTwo) => Math.floor (valueNumberOne / valueNumberTwo),
+  sub: (valueNumberOne, valueNumberTwo) => valueNumberOne - valueNumberTwo
 };
 
 module.exports = calculator;
