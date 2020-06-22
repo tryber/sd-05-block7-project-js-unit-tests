@@ -85,7 +85,7 @@ const payFunction = () => {
     const chavesType = Object.keys(order);
     chavesType.forEach((chave) => {
       const chavesFoods = Object.keys(order[chave]);
-      bill += chavesFoods.map(chaveFood =>  order[chave][chaveFood]).reduce((a,c) => a + c ,0);
+      bill += chavesFoods.map(chaveFood => order[chave][chaveFood]).reduce((a, c) => a + c, 0);
     });
   });
   return Math.round(bill * 1.1*100)/100;
