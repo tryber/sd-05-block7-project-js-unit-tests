@@ -21,9 +21,6 @@ const average = (numbersArr) => {
     if (typeof numbersArr[i] !== 'number') {
       return undefined;
     }
-  }
-
-  for (let i = 0; i < numbersArr.length; i += 1) {
     sum += numbersArr[i];
   }
 
