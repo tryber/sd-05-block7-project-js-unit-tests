@@ -16,8 +16,8 @@
 */
 
 const createStudent = (nome) => {
-  console.log("");
-  return { name: nome, feedback: () => 'Eita pessoa boa!'};
+  console.log('');
+  return { name: nome, feedback: () => 'Eita pessoa boa!' };
 };
 
 module.exports = createStudent;
