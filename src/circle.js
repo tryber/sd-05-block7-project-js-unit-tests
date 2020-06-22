@@ -29,3 +29,25 @@ const circle = (radius) => {
 };
 
 module.exports = circle;
+
+/* console.log(Object.keys(circle(100)).length);
+console.log(Object.keys({radius: 100, area: 3000, circunference: 600}).length);
+console.log(['radius', 'area', 'circunference'].length);
+console.log(3) */
+/*
+// console.log(circle(3));
+// console.log(circle(undefined));
+
+// [indice(0), indice(1)...] paulo[0]
+// const paulo = {'chave1': 10, 'chave2': 20};
+// paulo.chave1
+// paulo['chave1']
+// console.log(`Essas são as chaves ${Object.keys(paulo)}
+// esses são os valores ${Object.values(paulo)}`)
+// Object.keys(paulo)
+// Object.values(paulo)
+//------------------------------------------
+// 28.25999999
+// math.round(28.259999) = 28
+// math.round(2825.9999) = 2826
+// (2826)/100 = 28.26 */
