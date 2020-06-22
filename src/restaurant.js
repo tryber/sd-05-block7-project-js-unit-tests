@@ -73,39 +73,41 @@
 
 
 const createMenu = (objeto) => {
-  restaurant={
-  consumption: [],
-  order: orderFromMenu,
-  fetchMenu: {fetchMenu:objeto},
-  pay:payFunction
-}
+  restaurant = {
+    consumption: [],
+    order: orderFromMenu,
+    fetchMenu: { fetchMenu:objeto },
+    pay : payFunction,
+  };
   return restaurant;
 };
 
 const orderFromMenu = (request) => {
-  let options = Object.entries(restaurant.fetchMenu.fetchMenu)
+  //let options = Object.entries(restaurant.fetchMenu.fetchMenu)
 
   restaurant.consumption.push(request);
   restaurant.consumption.sort();
   return restaurant.consumption;
-}
-const payFunction = ()=>{
-  let bill=0;
-  restaurant.consumption.forEach((order)=>{
-    let chavesType = Object.keys(order);
-    chavesType.forEach(chave=>{
-      let chavesFoods=Object.keys(order[chave]);
-      chavesFoods.forEach(chaveFood=>bill+=order[chave][chaveFood]);
-    })
-  })
-  return bill*1.1;
- }
+};
+const payFunction = () => {
+  let bill = 0;
+  restaurant.consumption.forEach((order) => {
+    const chavesType = Object.keys(order);
+    chavesType.forEach((chave) => {
+      const chavesFoods = Object.keys(order[chave]);
+      chavesFoods.forEach(chaveFood => bill += order[chave][chaveFood]);
+    });
+  });
+  return bill * 1.1;
+};
 
+/*
 const testes = createMenu({food: {coxinha: 3.90, sanduiche: 9.90},
   drinks: {agua: 3.90, cerveja: 6.90}});
 console.log(testes.fetchMenu)
 testes.order({food: {coxinha: 3.90, sanduiche: 9.90},
   drinks: {agua: 3.90, cerveja: 6.90}});
 console.log(testes.pay()) 
+*/
 
 module.exports = createMenu;
