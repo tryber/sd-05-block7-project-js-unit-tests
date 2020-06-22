@@ -85,7 +85,7 @@ const payFunction = () => {
     const chavesType = Object.keys(order);
     chavesType.forEach((chave) => {
       const chavesFoods = Object.keys(order[chave]);
-      chavesFoods.forEach(chaveFood => bill += order[chave][chaveFood]);
+      chavesFoods.forEach(chaveFood => bill = bill+ order[chave][chaveFood]);
     });
   });
   return bill * 1.1;
