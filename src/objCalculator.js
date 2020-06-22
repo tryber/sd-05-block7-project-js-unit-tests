@@ -1,6 +1,3 @@
-
-
-
 /*
   Desenvolva um objeto calculator que possui quatro chaves:
     - add;
@@ -23,13 +20,10 @@
 */
 
 const calculator = {
-  add: (a, b) => a + b, 
-  mult:(a, b) => a * b, 
-  div:(a, b) => Math.floor(a / b), 
-  sub:(a, b) => a - b,
+  add: (a, b) => a + b,
+  mult: (a, b) => a * b,
+  div: (a, b) => Math.floor(a / b),
+  sub: (a, b) => a - b,
 };
-
-console.log(calculator.div(5, 2));
-console.log(calculator.div(10, 100));
 
 module.exports = calculator;
