@@ -73,6 +73,6 @@
 
 const createMenu = () => {
   // restaurante
-}
+};
 
 module.exports = createMenu;
