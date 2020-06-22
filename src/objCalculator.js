@@ -22,8 +22,8 @@
 const calculator = {
   add: (valueNumberOne, valueNumberTwo) => valueNumberOne + valueNumberTwo,
   mult: (valueNumberOne, valueNumberTwo) => valueNumberOne * valueNumberTwo,
-  div: (valueNumberOne, valueNumberTwo) => Math.floor (valueNumberOne / valueNumberTwo),
-  sub: (valueNumberOne, valueNumberTwo) => valueNumberOne - valueNumberTwo
+  div: (valueNumberOne, valueNumberTwo) => Math.floor(valueNumberOne / valueNumberTwo),
+  sub: (valueNumberOne, valueNumberTwo) => valueNumberOne - valueNumberTwo,
 };
 
 module.exports = calculator;
