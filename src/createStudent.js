@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 /*
   Dada uma função chamada createStudent que recebe como parâmetro um nome,
   retorne um objeto que contenha duas chaves:
@@ -15,6 +26,10 @@
     estudante.feedback() // Retorna: 'Eita pessoa boa!'
 */
 
-const createStudent = () => {};
+const createStudent = (nome) => {  
+  return {name: nome, feedback: () => {
+    return 'Eita pessoa boa!';
+  }};
+};
 
 module.exports = createStudent;
