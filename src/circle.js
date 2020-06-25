@@ -21,15 +21,10 @@
 const circle = (radius) => {
   const pi = 3.14;
   const circulu = {};
-  //raio = ?
   circulu.radius = radius;
-  //area = pi * r²
   circulu.area = (radius * radius) * pi;
-  //circunferencia = 2 * pi * raio
   circulu.circumference = (2 * pi) * radius;
   return (circulu);
 };
-
-console.log(circle(3))
 
 module.exports = circle;
