@@ -19,12 +19,13 @@
 */
 
 const circle = (radius) => {
-  const pi = 3.14;
-  const circulu = {};
-  circulu.radius = radius;
-  circulu.area = (radius * radius) * pi;
-  circulu.circumference = (2 * pi) * radius;
-  return (circulu);
+  const PI = 3.14;
+  if (!radius) { return undefined; }
+  return {
+    radius,
+    area: PI * radius * radius,
+    circumference: 2 * PI * radius,
+  };
 };
 
 module.exports = circle;
