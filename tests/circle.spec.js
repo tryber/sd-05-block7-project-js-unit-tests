@@ -28,7 +28,6 @@ describe('#circle', () => {
     assert.fail();
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna um objeto.
-    const retorno = circle(1);
     assert.strictEqual(typeof (retorno), 'object');
     // Teste se o objeto retornado tem 3 entradas.
     const entradas = Object.entries(retorno);
