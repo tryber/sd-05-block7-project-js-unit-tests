@@ -104,14 +104,11 @@ testes.order({food: {coxinha: 3.90, sanduiche: 9.90},
   drinks: {agua: 3.90, cerveja: 6.90}});
 console.log(testes.pay())
  */
-const objetoRetornado5= createMenu({
-  food: {'coxinha': 3.90, 'sanduiche': 9.90},
-  drinks: {'agua': 3.90, 'cerveja': 6.90}
-});
-  objetoRetornado5.order("coxinha");
-     objetoRetornado5.order("agua");
-     objetoRetornado5.order('coxinha')
-     objetoRetornado5.order('coxinha')
-    console.log(objetoRetornado5.pay())
-
+const objetoRetornado5= createMenu(
+  {
+  food: { 'coxinha': 3.90, 'sanduiche': 9.90 },
+  drinks: { 'agua': 3.90, 'cerveja': 6.90 }
+  }
+);
+  
 module.exports = createMenu;
