@@ -79,17 +79,12 @@ const orderFromMenu = (request) => {
   restaurant.consumption.sort();
   return restaurant.consumption;
 };
-const payFunction = () => {
-  let bill = 0;
-  restaurant.consumption.forEach((order) => {
-    const chavesType = Object.keys(order);
-    chavesType.forEach((chave) => {
-      const chavesFoods = Object.keys(order[chave]);
-      bill += chavesFoods.map(chaveFood => order[chave][chaveFood]).reduce((a, c) => a + c, 0);
-    });
-  });
-  return Math.round(bill * 1.1 * 100) / 100;
-};
+function payFunction() {
+  const chaves = Object.keys(restaurant.fetchMenu.fetchMenu);
+  const resumo = {};
+  chaves.forEach(atual => Object.assign(resumo, restaurant.fetchMenu.fetchMenu[atual]));
+  return Math.round(restaurant.consumption.reduce((total, atual) => total + resumo[atual], 0) * 1.1 * 100) / 100;
+}
 
 
 const createMenu = (objeto) => {
@@ -109,5 +104,14 @@ testes.order({food: {coxinha: 3.90, sanduiche: 9.90},
   drinks: {agua: 3.90, cerveja: 6.90}});
 console.log(testes.pay())
  */
+const objetoRetornado5= createMenu({
+  food: {'coxinha': 3.90, 'sanduiche': 9.90},
+  drinks: {'agua': 3.90, 'cerveja': 6.90}
+});
+  objetoRetornado5.order("coxinha");
+     objetoRetornado5.order("agua");
+     objetoRetornado5.order('coxinha')
+     objetoRetornado5.order('coxinha')
+    console.log(objetoRetornado5.pay())
 
 module.exports = createMenu;
