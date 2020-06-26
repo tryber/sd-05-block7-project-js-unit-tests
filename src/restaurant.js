@@ -97,18 +97,5 @@ const createMenu = (objeto) => {
   return restaurant;
 };
 
-/* const testes = createMenu({food: {coxinha: 3.90, sanduiche: 9.90},
-  drinks: {agua: 3.90, cerveja: 6.90}});
-console.log(testes.fetchMenu)
-testes.order({food: {coxinha: 3.90, sanduiche: 9.90},
-  drinks: {agua: 3.90, cerveja: 6.90}});
-console.log(testes.pay())
- */
-const objetoRetornado5= createMenu(
-  {
-  food: { 'coxinha': 3.90, 'sanduiche': 9.90 },
-  drinks: { 'agua': 3.90, 'cerveja': 6.90 }
-  }
-);
   
 module.exports = createMenu;
