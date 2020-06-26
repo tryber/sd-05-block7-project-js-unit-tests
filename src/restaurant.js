@@ -97,5 +97,4 @@ const createMenu = (objeto) => {
   return restaurant;
 };
 
-  
 module.exports = createMenu;
