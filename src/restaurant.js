@@ -95,9 +95,9 @@ const createMenu = (objetoQualquer) => {
 
 // function pay inicial: 
 // return restaurant.consumption.reduce((total, item) => 
-  //   Object.keys(restaurant.fetchMenu.fetchMenu).forEach(tipo => 
-  //     Object.keys(restaurant.fetchMenu.fetchMenu[tipo]).forEach(key => 
-  //       restaurant.fetchMenu.fetchMenu[tipo][key] === item ? total += restaurant.   fetchMenu.fetchMenu[tipo][item] : true)), 0);
+//   Object.keys(restaurant.fetchMenu.fetchMenu).forEach(tipo => 
+//     Object.keys(restaurant.fetchMenu.fetchMenu[tipo]).forEach(key => 
+//       restaurant.fetchMenu.fetchMenu[tipo][key] === item ? total += restaurant.   fetchMenu.fetchMenu[tipo][item] : true)), 0);
 
 // const tests = createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 1}});
 // console.log(tests.fetchMenu);
